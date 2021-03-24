@@ -26,7 +26,7 @@ session_start();
 
     if($CepDao->read($escola) == []){
         $_SESSION['erro_login'] = 1;
-        header("Location: ../index.php");
+        //header("Location: ../index.php");
         echo "erro email"; 
     }
     else
