@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 session_start(); 
-    $escola = new \_api\Classes\Escolas();
+    $escola = new \_api\Classes\Class_Escolas();
 
     
     function get_endereco($cep){
@@ -12,8 +12,8 @@ session_start();
     return $xml;
     }
 
-     $endereco = get_endereco($_POST['cep']); 
-     //echo $endereco->cep; 
+    $endereco = get_endereco($_POST['cep']); 
+    //echo $endereco->cep; 
     // echo $endereco->logradouro;
     $bairro = $endereco->bairro;
     $escola->setCidade($endereco->localidade); 
@@ -21,13 +21,12 @@ session_start();
 
     
 
-    $CepDao = new \_api\Classes\CepDao();
+    $CepDao = new \_api\Classes\DaoCep();
     $CepDao->read($escola);
 
     if($CepDao->read($escola) == []){
-        $_SESSION['erro_login'] = 1;
-        //header("Location: ../index.php");
-        echo "erro email"; 
+        
+        echo "erro"; 
     }
     else
     {
@@ -44,16 +43,7 @@ session_start();
             }
             
         endforeach;
-        /* if($senha == $psenha){
-            $_SESSION['idusuario'] = $id;
-            header("Location: ../index_fila.php");
-        }
-        else
-        {
-            echo "erro senha";
-            $_SESSION['erro_login'] = 2;
-            header("Location: ../index.php");
-        } */
+       
     } 
     
     
