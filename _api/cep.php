@@ -43,8 +43,24 @@ session_start();
             }
             
         endforeach;
+
+        foreach($CepDao->read($escola) as $endereco):
+            $bairroBD = $endereco['nm_bairro'];
+            
+            if($bairroBD != $bairro)
+            {
+                echo $endereco['nm_escola'];?> <br><?php
+                echo $endereco['nm_endereco'];?> <br><?php
+                echo $endereco['nm_cidade'];?> <br><?php
+                echo $endereco['nm_bairro'];?> <br><?php
+                echo $endereco['sg_uf'];?> <br><?php
+            }
+            
+        endforeach;
        
-    } 
+    }
+    
+    
     
     
         
