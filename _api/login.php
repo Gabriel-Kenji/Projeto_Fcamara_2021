@@ -23,7 +23,9 @@ session_start();
         endforeach;
         if($senha == $psenha){
             $_SESSION['idusuario'] = $id;
-            header("Location: ../home.html");
+            header("Location: ../home.php");
+            $_SESSION['logado'] = true;
+            
         }
         else
         {
