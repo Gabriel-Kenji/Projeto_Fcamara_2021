@@ -11,8 +11,9 @@ session_start();
     $xml = simplexml_load_file($url);
     return $xml;
     }
-
-    $endereco = get_endereco($_POST['cep']); 
+    $cepp = $_POST['cep'];
+    $cepp = $cepp[0].$cepp[1].$cepp[2].$cepp[3].$cepp[4].$cepp[6].$cepp[7].$cepp[8];
+    $endereco = get_endereco($cepp); 
     //echo $endereco->cep; 
     // echo $endereco->logradouro;
     $bairro = $endereco->bairro;
@@ -30,11 +31,23 @@ session_start();
     }
     else
     {
+        $i=0;
         foreach($CepDao->read($escola) as $endereco):
             $bairroBD = $endereco['nm_bairro'];
             
+            
+            if($i == 0)
+            {
+                echo "Essas são as Escolas no seu Bairro";?>
+                </br></br>
+                <?php
+                $i=+1;
+            }
+
             if($bairroBD == $bairro)
             {
+
+
                 echo $endereco['nm_escola'];?> <br><?php
                 echo $endereco['nm_endereco'];?> <br><?php
                 echo $endereco['nm_cidade'];?> <br><?php
@@ -43,19 +56,40 @@ session_start();
             }
             
         endforeach;
-
+        $i=0;
+        $is=0;
         foreach($CepDao->read($escola) as $endereco):
             $bairroBD = $endereco['nm_bairro'];
             
+
+
             if($bairroBD != $bairro)
             {
+                
+                if($i == 0)
+                {?>
+                    </br>
+                    <?php echo "Outras escolas na sua Cidade";?>
+                    </br></br>
+                    <?php
+                }
+
                 echo $endereco['nm_escola'];?> <br><?php
                 echo $endereco['nm_endereco'];?> <br><?php
                 echo $endereco['nm_cidade'];?> <br><?php
                 echo $endereco['nm_bairro'];?> <br><?php
                 echo $endereco['sg_uf'];?> <br><?php
+                $i=+1;
             }
             
+            if($i == 0)
+            {?>
+                </br>
+                <?php echo "Não existem mais escolas na sua Cidade";?>
+                </br></br>
+                <?php
+            }
+            $i=+1;
         endforeach;
        
     }
