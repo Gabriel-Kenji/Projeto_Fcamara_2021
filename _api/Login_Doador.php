@@ -19,7 +19,7 @@ session_start();
         foreach($LoginDao->read($user) as $login):
             $senha = $login['nm_senha'];
             $id = $login['cd_usuario'];
-            $nomeuser = $login['nm_usuario'];
+            $nomeuser = $login['nm_doador'];
             
         endforeach;
         if($senha == $psenha){
