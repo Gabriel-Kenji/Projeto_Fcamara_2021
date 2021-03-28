@@ -1,7 +1,7 @@
 <?php
 namespace _api\Classes;
 class Class_Aluno{
-    private $ra, $nome, $email, $senha, $estado, $cidade, $bairro, $telefone;
+    private $ra, $nome, $email, $senha, $estado, $cidade, $bairro, $telefone, $inep;
 
     public function getRa(){
         return $this->ra;
@@ -66,6 +66,14 @@ class Class_Aluno{
     public function setTelefone($telefone){
         $this->telefone = $telefone;
     }  
+
+    public function getInep(){
+        return $this->ra;
+    }
+
+    public function setInep($inep){
+        $this->inep = $inep;
+    }
 }
 
 ?>

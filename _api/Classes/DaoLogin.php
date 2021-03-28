@@ -3,10 +3,10 @@ namespace _api\Classes;
 
 Class DaoLogin
 {
-    public function read(Class_Usuario $p){
+    public function read(Class_Aluno $p){
 
         //puxando dados do banco
-        $sql = 'SELECT * From tb_usuario WHERE nm_email = ?';
+        $sql = 'SELECT * From tb_aluno WHERE nm_email = ?';
 
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getEmail());
