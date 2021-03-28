@@ -19,6 +19,7 @@ class Class_Material{
         $this->nome = $nome;
     }
 
+    
 }
 
 ?>
