@@ -68,7 +68,7 @@ class Class_Aluno{
     }  
 
     public function getInep(){
-        return $this->ra;
+        return $this->inep;
     }
 
     public function setInep($inep){
