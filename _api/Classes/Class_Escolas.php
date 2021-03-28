@@ -1,14 +1,14 @@
 <?php
 namespace _api\Classes;
-class Class_Escolas{
-    private $id, $nome, $endereco, $bairro, $cidade, $uf, $cep;
+class Class_Escola{
+    private $inep, $nome, $email, $senha, $estado, $cidade, $bairro, $telefone;
 
-    public function getId(){
-        return $this->id;
+    public function getInep(){
+        return $this->inep;
     }
 
-    public function setId($id){
-        $this->id = $id;
+    public function setInep($inep){
+        $this->id = $inep;
     }
 
     public function getNome(){
@@ -19,20 +19,28 @@ class Class_Escolas{
         $this->nome = $nome;
     }
 
-    public function getEndereco(){
-        return $this->endereco;
+    public function getEmail(){
+        return $this->email;
     }
 
-    public function setEndereco($endereco){
-        $this->endereco = $endereco;
+    public function setEmail($email){
+        $this->email = $email;
     }
 
-    public function getBairro(){
-        return $this->bairro;
+    public function getSenha(){
+        return $this->senha;
     }
 
-    public function setBairro($bairro){
-        $this->bairro = $bairro;
+    public function setSenha($senha){
+        $this->senha = $senha;
+    }
+
+    public function getEstado(){
+        return $this->estado;
+    }
+
+    public function setEstado($estado){
+        $this->estado = $estado;
     }
 
     public function getCidade(){
@@ -43,21 +51,22 @@ class Class_Escolas{
         $this->cidade = $cidade;
     }
 
-    public function getUf(){
-        return $this->uf;
+    public function getBairro(){
+        return $this->bairro;
     }
 
-    public function setUf($uf){
-        $this->uf = $uf;
+    public function setBairro($bairro){
+        $this->bairro = $bairro;
     }
 
-    public function getCep(){
-        return $this->cep;
+    public function getTelefone(){
+        return $this->telefone;
     }
 
-    public function setCep($cep){
-        $this->cep = $cep;
-    }
+    public function setTelefone($telefone){
+        $this->telefone = $telefone;
+    }  
+    
 }
 
 ?>
