@@ -1,14 +1,14 @@
 <?php
 namespace _api\Classes;
-class Class_Aluno{
-    private $ra, $nome, $email, $senha, $estado, $cidade, $bairro, $telefone;
+class Class_Doador{
+    private $CPF, $nome, $email, $senha, $estado, $cidade, $bairro, $telefone;
 
-    public function getRa(){
-        return $this->ra;
+    public function getCPF(){
+        return $this->CPF;
     }
 
-    public function setRa($ra){
-        $this->ra = $ra;
+    public function setCPF($CPF){
+        $this->CPF = $CPF;
     }
 
     public function getNome(){
@@ -65,7 +65,7 @@ class Class_Aluno{
 
     public function setTelefone($telefone){
         $this->telefone = $telefone;
-    }  
+    }
+   
 }
-
 ?>

@@ -19,15 +19,6 @@ class Class_Material{
         $this->nome = $nome;
     }
 
-    public function getTipo(){
-        return $this->tipo;
-    }
-
-    public function setTipo($tipo){
-        $this->endereco = $tipo;
-    }
-
-    
 }
 
 ?>
