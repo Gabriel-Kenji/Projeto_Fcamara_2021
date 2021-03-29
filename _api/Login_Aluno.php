@@ -11,7 +11,7 @@ session_start();
 
     if($LoginDao->read($user) == []){
         $_SESSION['erro_login'] = 1;
-        header("Location: ../index.html");
+        header("Location: ../testlogin.html");
         echo "erro email"; 
     }
     else
@@ -34,7 +34,7 @@ session_start();
         {
             echo "erro senha";
             $_SESSION['erro_login'] = 2;
-            header("Location: ../index.html");
+            header("Location: ../testlogin.html");
         }
     }
     

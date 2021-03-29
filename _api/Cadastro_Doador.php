@@ -43,7 +43,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../cadastro_doador.html");
+                header("Location: ../testcadastro.html");
             }
         }
         else
@@ -58,7 +58,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../cadastro_doador.html");
+                header("Location: ../testcadastro.html");
             }
         }
         
