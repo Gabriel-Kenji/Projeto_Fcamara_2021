@@ -5,6 +5,8 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
   
     $user = new \_api\Classes\Class_Doador();
 
+
+    $CPF = $_POST['cpf'];
     $usuario = $_POST['nome'];
     $senha = $_POST['senha'];
     $senhaconf = $_POST['senhaconf'];
@@ -13,6 +15,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     $cidade = $_POST['cidade'];
     $bairro = $_POST['bairro'];
 
+    $user->setCPF($CPF);
     $user->setEmail($email);
     $user->setNome($usuario);
     $user->setSenha($senha);
