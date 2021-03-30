@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="btn-login" onclick="openLogin()">LOGIN</button>
+    <div class="bg-login" id="btnLogin">
+        <div class="modal">
+            <span class="close-modal" onclick="closeLogin()">&times;</span>
+
+            <div class="container-modal">
+                <div class="user sign-in">
+                    <div class="img-bx"><img src="../Projeto_Fcamara_2021/images/cachorrinho.png" ></div>
+                    <div class="form-bx">
+                        <form>
+                            <h2>Login</h2>
+                            <input type="email" name="" placeholder="email">
+                            <input type="password" name="" placeholder="senha">
+                            <input type="submit" name="" value="Login">
+                            <p class="link-sign-up">Não tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="user sign-up">
+                    <div class="form-bx">
+                        <form>
+                            <h2>Criar conta</h2>
+                            <div class="users">
+                                <h3>Aluno</h3>
+                                <h3>Doador</h3>
+                                <h3>Escola</h3>
+                            </div>
+                            <input type="text" name="" placeholder="nome completo">
+                            <input type="email" name="" placeholder="email">
+                            <input type="password" name="" placeholder="senha">
+                            <input type="password" name="" placeholder="confirme senha">
+                            <input type="submit" name="" value="Cadastrar">
+                            <p class="link-sign-up">Já tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
+                        </form>
+                    </div>
+                    <div class="img-bx"><img src="../Projeto_Fcamara_2021/images/gatinho.png" ></div>
+                    
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
