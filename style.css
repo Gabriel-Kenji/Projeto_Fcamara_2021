@@ -36,7 +36,10 @@ html, body {
 }
 
 .modal span {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
     font-size: 30px;
     font-weight: bold;
     color: #000;
@@ -180,9 +183,6 @@ html, body {
 .container-modal.active .sign-up .img-bx {
     left: 0;
 }
-
-
-
 
 .container-modal .sign-in .form-bx {
     left: 0;
