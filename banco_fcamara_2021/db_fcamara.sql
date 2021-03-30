@@ -3,7 +3,7 @@ create database db_fcamara;
 use db_fcamara;
 
 CREATE TABLE tb_escola (
-    cd_INEP int NOT NULL AUTO_INCREMENT,
+    cd_INEP int NOT NULL,
     nm_escola varchar(255) NOT NULL,
     nm_email varchar(255) NOT NULL,
     nm_senha varchar(16) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE tb_escola (
 );
 
 CREATE TABLE tb_aluno (
-    cd_RA int NOT NULL AUTO_INCREMENT,
+    cd_RA int NOT NULL,
     nm_aluno varchar(255) NOT NULL,
     nm_email varchar(255) NOT NULL,
     nm_senha varchar(16) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE tb_pedido (
 );
 
 CREATE TABLE tb_doador (
-    cd_CPF int NOT NULL AUTO_INCREMENT,
+    cd_CPF int NOT NULL ,
     nm_doador varchar(255) NOT NULL,
     nm_email varchar(255) NOT NULL,
     nm_senha varchar(16) NOT NULL,
