@@ -8,7 +8,7 @@ class Class_Escola{
     }
 
     public function setInep($inep){
-        $this->id = $inep;
+        $this->inep = $inep;
     }
 
     public function getNome(){
