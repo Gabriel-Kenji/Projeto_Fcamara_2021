@@ -1,3 +1,6 @@
+<?php
+include("_api/Select_Escolas.php")
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -46,7 +49,7 @@
     <input name="nome" type="text" id="defaultForm-pass" class="form-control validate" placeholder="Nome" required>
   
     <input name="email" type="email" id="defaultForm-email" class="form-control validate"
-    placeholder="Email address required">
+    placeholder="Email" required>
     
     <input name="senha" type="password" id="defaultForm-pass" class="form-control validate" placeholder="Senha" required>
     
@@ -88,8 +91,30 @@
     <input name="bairro" type="text" id="defaultForm-pass" class="form-control validate" placeholder="Bairro" required>
 
     <input name="telefone" type="text" id="defaultForm-pass" class="form-control validate" placeholder="Telefone (opcional)" >
-
-    <input name="inep" type="text" id="defaultForm-pass" class="form-control validate" placeholder="INEP (Escola)" >
+    
+    <select name="sg_uf" class="form-select">
+      <option value="" selected>Selecione uma Escola</option>
+      <?php 
+      
+        $contz = 0;
+        for($i=0 ; $i<=1; $i++ ){
+          if($array[$contz] != null){
+              echo $array[$contz][0]. $array[$contz][1] ;
+              ?>
+              <option value="<?php echo $array[$contz][0] ?>" ><?php echo $array[$contz][1] ?></option><?php
+              $contz++;
+              $i = 0;
+          }
+        }
+      ?>
+    </select>
+    
+      <div id="inep">
+        
+      </div>
+    
+    
+    
 
 
     
@@ -98,6 +123,19 @@
     <a href="login_aluno.html">LOGIN ALUNO</a>
   </form>
 </main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+<script>
+  //var fila = setInterval(function() { $('#inep').load('_api/Select_Escolas.php'); }, 99);
+</script>
 
 
     

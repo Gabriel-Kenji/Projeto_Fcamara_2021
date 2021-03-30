@@ -26,7 +26,7 @@ session_start();
             $_SESSION['idusuario'] = $id;
             $_SESSION['logado'] = true;
             $_SESSION['nomeuserlogado'] = $nomeuser;
-            header("Location: ../cadastroEscola.php");
+            header("Location: ../home.php");
             
             
         }

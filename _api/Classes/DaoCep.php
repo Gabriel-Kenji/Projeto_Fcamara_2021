@@ -3,14 +3,14 @@ namespace _api\Classes;
 
 Class DaoCep
 {
-    public function read(Class_Escolas $p){
+    public function read(Class_Escola $p){
 
         //puxando dados do banco
         $sql = 'SELECT * From tb_escolas WHERE nm_cidade = ? and sg_uf = ?';
 
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getCidade());
-        $stmt->bindValue(2, $p->getUf());
+        $stmt->bindValue(2, $p->getEstado());
         $stmt->execute();
 
         if($stmt->rowCount() > 0):
