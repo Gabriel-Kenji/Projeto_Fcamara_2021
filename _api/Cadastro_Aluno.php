@@ -5,6 +5,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
   
     $user = new \_api\Classes\Class_Aluno();
 
+    $ra = $_POST['ra'];
     $usuario = $_POST['nome'];
     $senha = $_POST['senha'];
     $senhaconf = $_POST['senhaconf'];
@@ -14,6 +15,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
     $bairro = $_POST['bairro'];
     $inep = $_POST['inep'];
 
+    $user->setRa($ra);
     $user->setEmail($email);
     $user->setNome($usuario);
     $user->setSenha($senha);
