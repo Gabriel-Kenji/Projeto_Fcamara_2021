@@ -45,6 +45,7 @@ include("_api/Select_Escolas.php")
     <!-- <img class="mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1> 
 
+    <input name="ra" type="text" id="defaultForm-pass" class="form-control validate" placeholder="RA" required>
 
     <input name="nome" type="text" id="defaultForm-pass" class="form-control validate" placeholder="Nome" required>
   
@@ -92,7 +93,7 @@ include("_api/Select_Escolas.php")
 
     <input name="telefone" type="text" id="defaultForm-pass" class="form-control validate" placeholder="Telefone (opcional)" >
     
-    <select name="sg_uf" class="form-select">
+    <select name="inep" class="form-select">
       <option value="" selected>Selecione uma Escola</option>
       <?php 
       

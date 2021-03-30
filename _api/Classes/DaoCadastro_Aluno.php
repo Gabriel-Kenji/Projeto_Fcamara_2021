@@ -22,13 +22,14 @@ class DaoCadastro_Aluno{
         $sql = 'INSERT INTO tb_aluno (cd_RA, nm_aluno, nm_email, nm_senha, sg_estado, nm_cidade, nm_bairro, ds_telefone, cd_INEP) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
         $stmt = Conexao::getConn()->prepare($sql);
+
         $stmt->bindValue(1, $p->getRa());
         $stmt->bindValue(2, $p->getNome());
         $stmt->bindValue(3, $p->getEmail());
         $stmt->bindValue(4, $p->getSenha());
         $stmt->bindValue(5, $p->getEstado());
         $stmt->bindValue(6, $p->getCidade());
-        $stmt->bindValue(7, $p->getBairro());
+        $stmt->bindValue(7, $p->getBairro()); 
         $stmt->bindValue(8, $p->getTelefone());
         $stmt->bindValue(9, $p->getInep()); 
 
