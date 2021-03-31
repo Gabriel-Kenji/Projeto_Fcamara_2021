@@ -1,14 +1,14 @@
 <?php
 namespace _api\Classes;
 class Class_Material{
-    private $id, $nome, $Tipo;
+    private $material, $nome, $Tipo;
 
-    public function getId(){
-        return $this->id;
+    public function getMaterial(){
+        return $this->material;
     }
 
-    public function setId($id){
-        $this->id = $id;
+    public function setMaterial($material){
+        $this->material = $material;
     }
 
     public function getNome(){
@@ -18,8 +18,7 @@ class Class_Material{
     public function setNome($nome){
         $this->nome = $nome;
     }
-
-    
+        
 }
 
 ?>
