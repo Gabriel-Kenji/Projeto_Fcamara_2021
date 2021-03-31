@@ -23,10 +23,10 @@ session_start();
             
         endforeach;
         if($senha == $psenha){
-            $_SESSION['idusuario'] = $id;
+            $_SESSION['RaAuluno'] = $id;
             $_SESSION['logado'] = true;
             $_SESSION['nomeuserlogado'] = $nomeuser;
-            header("Location: ../home.php");
+            header("Location: ../home_aluno.php");
             
             
         }

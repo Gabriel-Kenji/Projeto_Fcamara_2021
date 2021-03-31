@@ -99,7 +99,7 @@ include("_api/Select_Escolas.php")
       
         $contz = 0;
         for($i=0 ; $i<=1; $i++ ){
-          if($array[$contz] != null){
+          if(isset($array[$contz]) && !empty($array[$contz])){
               echo $array[$contz][0]. $array[$contz][1] ;
               ?>
               <option value="<?php echo $array[$contz][0] ?>" ><?php echo $array[$contz][1] ?></option><?php
