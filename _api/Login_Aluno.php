@@ -18,12 +18,12 @@ session_start();
     {
         foreach($LoginDao->read($user) as $login):
             $senha = $login['nm_senha'];
-            $id = $login['cd_usuario'];
+            $id = $login['cd_RA'];
             $nomeuser = $login['nm_aluno'];
             
         endforeach;
         if($senha == $psenha){
-            $_SESSION['RaAuluno'] = $id;
+            $_SESSION['RaAluno'] = $id;
             $_SESSION['logado'] = true;
             $_SESSION['nomeuserlogado'] = $nomeuser;
             header("Location: ../home_aluno.php");

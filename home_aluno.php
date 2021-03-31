@@ -42,7 +42,7 @@ if(!isset($_SESSION['logado'])){
 
     
 <main class="form-signin">
-  <form action="_api/cadastroEscola.php" method="post">
+  <form action="_api/Cadastro_Pedido.php" method="post">
   <h1 class="h3 mb-3 fw-normal">Ola <?php echo $_SESSION['nomeuserlogado']; ?> </h1> 
     <a href="/projeto_fcamara_2021/_api/function/logout.php">logout</a>
     <br/>
@@ -57,7 +57,8 @@ if(!isset($_SESSION['logado'])){
         if(isset($array[$contz]) && !empty($array[$contz])){
            
            ?><a><?php echo $array[$contz][1] ; ?></a>
-           <input name="nm_endereco" type="text" id="material<?php echo $array[$contz][0] ;?>" class="form-control validate" placeholder="Quantidade" required>
+           <?php $name = "material".$array[$contz][0];?>
+           <input name="<?php echo $name ;?>" type="text" id="" class="form-control validate" placeholder="Quantidade" >
           <?php
           $contz++;
           $i = 0;
