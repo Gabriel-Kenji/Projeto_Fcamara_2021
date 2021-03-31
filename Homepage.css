@@ -32,7 +32,6 @@
 }
 
 .u-section-1 .u-btn-1 {
-  background-image: none;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1rem;
@@ -206,7 +205,7 @@
   height: 122px;
   background-image: url("images/maressa.jpeg");
   background-position: 50% 50%;
-  margin: -137px 134px 0 auto;
+  margin: -137px auto 0 253px;
 }
 
 .u-section-2 .u-text-1 {
@@ -214,7 +213,7 @@
 }
 
 .u-section-2 .u-text-2 {
-  margin: -21px 104px 0 255px;
+  margin: -21px 112px 0 247px;
 }
 
 .u-section-2 .u-shape-3 {
@@ -234,7 +233,7 @@
 .u-section-2 .u-shape-4 {
   width: 118px;
   height: 122px;
-  margin: -107px auto 0 253px;
+  margin: -100px auto 0 272px;
 }
 
 .u-section-2 .u-image-4 {
@@ -242,15 +241,15 @@
   height: 122px;
   background-image: url("images/marina.jpeg");
   background-position: 50% 50%;
-  margin: -137px auto 0 236px;
+  margin: -137px auto 0 255px;
 }
 
 .u-section-2 .u-text-3 {
-  margin: 22px 372px 0 20px;
+  margin: 15px 372px 0 20px;
 }
 
 .u-section-2 .u-text-4 {
-  margin: -21px 122px 0 244px;
+  margin: -21px 119px 0 247px;
 }
 
 .u-section-2 .u-shape-5 {
@@ -270,7 +269,7 @@
 .u-section-2 .u-shape-6 {
   width: 118px;
   height: 122px;
-  margin: -107px 134px 0 auto;
+  margin: -107px 121px 0 auto;
 }
 
 .u-section-2 .u-image-6 {
@@ -278,7 +277,7 @@
   height: 122px;
   background-image: url("images/jonathan.jpeg");
   background-position: 50% 50%;
-  margin: -137px auto 0 240px;
+  margin: -137px auto 0 253px;
 }
 
 .u-section-2 .u-text-5 {
@@ -286,7 +285,7 @@
 }
 
 .u-section-2 .u-text-6 {
-  margin: -21px 111px 0 231px;
+  margin: -21px 104px 0 239px;
 }
 
 .u-section-2 .u-shape-7 {
@@ -297,7 +296,7 @@
 }
 
 .u-section-2 .u-layout-cell-2 {
-  min-height: 664px;
+  min-height: 759px;
 }
 
 .u-section-2 .u-container-layout-2 {
@@ -316,13 +315,12 @@
 }
 
 .u-section-2 .u-btn-1 {
-  background-image: none;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1rem;
   border-style: none;
   font-weight: 700;
-  margin: 30px auto 0 133px;
+  margin: 30px auto 0 140px;
   padding: 10px 52px 10px 51px;
 }
 
@@ -348,7 +346,7 @@
   }
 
   .u-section-2 .u-text-2 {
-    margin-right: 54px;
+    margin-right: 62px;
     margin-left: 165px;
   }
 
@@ -366,7 +364,7 @@
   }
 
   .u-section-2 .u-text-4 {
-    margin-right: 72px;
+    margin-right: 69px;
     margin-left: 170px;
   }
 
@@ -389,12 +387,12 @@
 
   .u-section-2 .u-text-6 {
     margin-top: -31px;
-    margin-right: 61px;
-    margin-left: 181px;
+    margin-right: 54px;
+    margin-left: 189px;
   }
 
   .u-section-2 .u-layout-cell-2 {
-    min-height: 548px;
+    min-height: 626px;
   }
 
   .u-section-2 .u-text-7 {
@@ -407,7 +405,7 @@
   }
 
   .u-section-2 .u-btn-1 {
-    margin-left: 33px;
+    margin-left: 40px;
   }
 }
 
@@ -422,6 +420,10 @@
 
   .u-section-2 .u-shape-2 {
     margin-left: 182px;
+  }
+
+  .u-section-2 .u-image-2 {
+    margin-left: 177px;
   }
 
   .u-section-2 .u-text-1 {
@@ -486,8 +488,8 @@
 
   .u-section-2 .u-text-6 {
     margin-top: -35px;
-    margin-right: 6px;
-    margin-left: 126px;
+    margin-right: 0;
+    margin-left: 133px;
   }
 
   .u-section-2 .u-shape-7 {
@@ -675,7 +677,6 @@
   .u-section-2 .u-text-6 {
     margin-top: -59px;
     margin-left: 0;
-    margin-right: 0;
   }
 
   .u-section-2 .u-shape-7 {
@@ -714,7 +715,6 @@
 .u-section-3 .u-text-1 {
   line-height: 1.2;
   font-size: 3.75rem;
-  font-family: Raleway, sans-serif;
   margin: 40px -30px 0 0;
 }
 
@@ -760,6 +760,7 @@
   }
 
   .u-section-3 .u-text-1 {
+    font-family: Roboto, sans-serif;
     margin-right: 0;
   }
 
@@ -917,7 +918,6 @@
 }
 
 .u-section-4 .u-btn-1 {
-  background-image: none;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 1rem;
@@ -1000,14 +1000,15 @@
 }
 
 .u-section-5 .u-sheet-1 {
-  min-height: 904px;
+  min-height: 905px;
 }
 
 .u-section-5 .u-group-1 {
   width: 569px;
   min-height: 527px;
   box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
-  margin: 79px 29px 0 auto;
+  height: auto;
+  margin: 79px 32px 0 auto;
 }
 
 .u-section-5 .u-container-layout-1 {
@@ -1017,7 +1018,6 @@
 .u-section-5 .u-text-1 {
   text-transform: uppercase;
   font-size: 3rem;
-  font-weight: 400;
   margin: 0;
 }
 
@@ -1045,6 +1045,7 @@
   border-style: solid;
   font-weight: 700;
   text-transform: uppercase;
+  background-image: none;
 }
 
 .u-section-5 .u-image-1 {
@@ -1138,8 +1139,16 @@
     min-height: 1018px;
   }
 
+  .u-section-5 .u-group-1 {
+    height: auto;
+  }
+
   .u-section-5 .u-container-layout-1 {
     padding-left: 235px;
+  }
+
+  .u-section-5 .u-text-1 {
+    font-weight: 400;
   }
 
   .u-section-5 .u-form-1 {
