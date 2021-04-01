@@ -214,6 +214,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .container-modal .users h3 {
@@ -269,7 +270,7 @@
 
 .img-cadastro img {
   margin: 0 10px;
-  max-width: 100px;
+  max-width: 80px;
 }
 
 @media (max-width: 1199px) {
