@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 //pegando os dados
-$id = $_SESSION['RaAuluno'];
+$id = $_SESSION['RaAluno'];
 include("_api/Select_Material.php");
 //verificacao
 if(!isset($_SESSION['logado'])){
