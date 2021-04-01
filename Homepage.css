@@ -152,7 +152,7 @@
   width: 50%;
   height: 100%;
   background-color: #fff;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   padding: 40px;
@@ -221,9 +221,9 @@
 .container-modal .users h3 {
   font-size: 0.8em;
   text-transform: uppercase;
-  padding: 10px 10px 3px;
+  padding: 5px 10px 3px;
 }
-/* 
+
 .container-modal .sign-up {
   pointer-events: none;
   
@@ -263,7 +263,16 @@
 
 .container-modal.active .sign-in .img-bx {
   left: -100%;
-} */
+}
+
+.users h3 {
+  text-align: center;
+}
+
+.img-cadastro img {
+  margin: 0 10px;
+  max-width: 100px;
+}
 
 @media (max-width: 1199px) {
   .u-section-1 {

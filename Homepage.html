@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="Homepage.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <script type="text/javascript" src="script.js"></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i|Oswald:200,300,400,500,600,700">
 </head>
@@ -54,7 +53,7 @@
                         <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Homepage.html#carousel_119d"
                                 data-page-id="303762" style="padding: 12px 20px;">Contate-nos</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 12px 20px;">Cadastre-se</a>
+                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 12px 20px;" onclick="openCadastro()">Cadastre-se</a>
                         </li>
                         <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 12px 20px; cursor: pointer" onclick="openLogin()">Entrar</a>
                         </li>
@@ -75,7 +74,7 @@
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Homepage.html#carousel_119d" data-page-id="303762" style="padding: 10px 20px;">Contate-nos</a>
                                 </li>
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Cadastre-se</a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;" onclick="openCadastro()">Cadastre-se</a>
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;" onclick="openLogin()">Entrar</a>
                                 </li>
@@ -391,40 +390,55 @@
                 <div class="user sign-in">
                     <div class="img-bx"><img src="./images/wqe-min.jpg" ></div>
                     <div class="form-bx">
-                        <form action="" method="post">
+                        <form>
                             <h2>Login</h2>
                             <input type="email" name="" placeholder="email">
                             <input type="password" name="" placeholder="senha">
                             <input type="submit" name="" value="Login">
-                            <p class="link-sign-up">Não tem cadastro? <a href="#">Clique aqui</a> </p>
+                            <p class="link-sign-up">Não tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
                         </form>
                     </div>
                 </div>
 
-                <!-- <div class="user sign-up">
+                <div class="user sign-up">
                     <div class="form-bx">
                         <form>
                             <h2>Criar conta</h2>
                             <div class="users">
-                                <h3>Aluno</h3>
-                                <h3>Doador</h3>
-                                <h3>Escola</h3>
+                                <form>
+                                    <div>
+                                        <h3>Aluno</h3>
+                                        <div class="img-cadastro">
+                                            <img src="./images/aluno_300.png" alt="" srcset="">
+                                        </div>
+                                            <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
+                                    </div>
+                                    <div>
+                                        <h3>Doador</h3>
+                                        <div class="img-cadastro">
+                                            <img src="./images/doador_300.png" alt="" srcset="">
+                                        </div>
+                                            <INPUT TYPE="radio" NAME="OPCAO" VALUE="op2">
+                                    </div>
+                                    <div>
+                                        <h3>Escola</h3>
+                                        <div class="img-cadastro">
+                                            <img src="./images/escola_300.png" alt="" srcset="">
+                                        </div>
+                                            <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
+                                    </div>
+                                </form>
                             </div>
-                            <input type="text" name="" placeholder="nome completo">
-                            <input type="email" name="" placeholder="email">
-                            <input type="password" name="" placeholder="senha">
-                            <input type="password" name="" placeholder="confirme senha">
-                            <input type="submit" name="" value="Cadastrar">
                             <p class="link-sign-up">Já tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
                         </form>
                     </div>
-                    <div class="img-bx"><img src="./images/" ></div>
+                    <div class="img-bx"><img src="./images/aluno.png"></div>
 
-                </div>  -->
+                </div> 
             </div>
         </div>
     </div>
-    
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
