@@ -3,12 +3,13 @@ namespace _api\Classes;
 
 Class DaoAlunoEscola
 {
-    public function read(Class_Aluno $p){
+    public function readselect(Class_Aluno $p){
 
         //puxando dados do banco
-        $sql = 'SELECT * FROM tb_aluno WHERE cd_INEP = ?';
+        $sql = 'SELECT * FROM tb_aluno where cd_INEP = ?';
+
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $p->getInep());
+        $stmt->bindValue(1, $p->getInep()); 
         $stmt->execute();
 
 

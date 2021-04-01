@@ -1,21 +1,18 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
-
-    $inep = new \_api\Classes\Class_Aluno();
-    $inep->setInep = $id;
+    $user = new \_api\Classes\Class_aluno();
+    $user->setInep($id);
 
     $Aluno_EscolaDao = new \_api\Classes\DaoAlunoEscola();
-    $Aluno_EscolaDao->read($inep);
+    $Aluno_EscolaDao->readselect();
     
     $cont = 0;
     $array = [];    
 
-    foreach($Aluno_EscolaDao->read($inep) as $aluno):
-
+    foreach($Aluno_EscolaDao->readselect() as $aluno):
         $array[$cont] = array (
-            $aluno["cd_RA"],$aluno["nm_aluno"]);
+            $aluno["nm_aluno"]);
         $cont++;
-        
     endforeach;
 
 ?>

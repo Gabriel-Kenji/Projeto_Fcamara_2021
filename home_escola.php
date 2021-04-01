@@ -50,13 +50,13 @@ include("_api/Select_Aluno_Escola.php");
     $cont = 0;
         for($i=0 ; $i<=1; $i++ ){
           if(isset($array[$cont]) && !empty($array[$cont])){
-              echo $array[$cont][0]. $array[$cont][0] ;
               ?>
-                <h1 class="h3 mb-3 fw-normal">assad<?php echo $array[$cont][0] ?> - <?php echo $array[$cont][0] ?> </h1><?php
+                <h1 class="h3 mb-3 fw-normal"><?php echo $array[$cont][0] ?> </h1><?php
               $cont++;
               $i = 0;
-          }
+          
         }
+      }
     ?>
    
   </form>
