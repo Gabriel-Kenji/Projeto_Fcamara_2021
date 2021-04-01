@@ -31,16 +31,25 @@
   margin: 14px 174px 0 -17px;
 }
 
-.u-section-1 .u-btn-1 {
-  background-image: none;
+.btn-saiba {
+  color:#fff;
+  background-color: #292e33;
+  text-align: center;
+  padding: 10px 50px;
+  margin-top: 40px;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 1rem;
-  border-style: none;
   font-weight: 700;
-  margin: 42px auto 0 -17px;
-  padding: 10px 52px 10px 51px;
+  cursor: pointer;
+  margin: 20px 18px 0 -17px;
+  position: absolute;
 }
+
+.btn-saiba:hover {
+  background-color: rgb(66, 84, 101);
+  color: #fff;
+}
+
+
 
 .u-section-1 .u-image-1 {
   background-image: url("images/-min.jpg");
@@ -51,6 +60,209 @@
 .u-section-1 .u-container-layout-2 {
   padding: 30px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+/* MODAL LOGIN/CADASTRO */
+
+.bg-login {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: -100%;
+  display: block;
+  transition: all .35s;
+}
+
+.modal {
+  width: 70%;
+  height: 70%;
+  border-radius: 5px;
+  margin: 6em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.modal span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  margin: 20px 30px;
+  transition: all .35s;
+}
+
+.modal span:hover {
+  color: rgb(66, 84, 101);
+  transition: all .35s;
+  cursor: pointer;
+  transform: rotate(180deg);
+  /* position: fixed; */
+}
+
+.container-modal {
+  position: relative;
+  width: 800px;
+  height: 468px;
+  box-shadow:  0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.container-modal .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.container-modal .user .img-bx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.container-modal .user .img-bx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-modal .user .form-bx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  transition: all .5s;
+}
+
+
+.container-modal .user .form-bx form h2{
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.container-modal .user .form-bx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.container-modal .user .form-bx form input[type="submit"] {
+  max-width: 200px;
+  background-color: #292e33;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: 500;
+  transition: .5s;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.container-modal .user .form-bx form input[type="submit"]:hover {
+  background-color: rgb(66, 84, 101);
+}
+
+.container-modal .user .form-bx form .link-sign-up {
+  position: relative;
+  margin-top: 20px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.container-modal .user .form-bx form .link-sign-up a {
+  font-weight: 600;
+  text-decoration: none;  
+}
+
+.container-modal .users {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-modal .users h3 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  padding: 10px 10px 3px;
+}
+/* 
+.container-modal .sign-up {
+  pointer-events: none;
+  
+}
+
+.container-modal.active .sign-up .form-bx {
+  pointer-events: initial;
+}
+
+.container-modal .sign-up .form-bx {
+  left: 100%;
+}
+
+.container-modal.active .sign-up .form-bx {
+  left: 0;
+}
+
+.container-modal .sign-up .img-bx {
+  left: -100%;
+}
+
+.container-modal.active .sign-up .img-bx {
+  left: 0;
+}
+
+.container-modal .sign-in .form-bx {
+  left: 0;
+}
+
+.container-modal.active .sign-in .form-bx {
+  left: 100%;
+}
+
+.container-modal .sign-in .img-bx {
+  left: 0;
+}
+
+.container-modal.active .sign-in .img-bx {
+  left: -100%;
+} */
 
 @media (max-width: 1199px) {
   .u-section-1 {
@@ -133,6 +345,23 @@
 }
 
 @media (max-width: 575px) {
+  .img-bx {
+    display: none;
+  }
+
+  .container-modal .user .form-bx {
+    width: 100%;
+  }
+
+  .btn-saiba {
+    color:#fff;
+    background-color: #292e33;
+    text-align: center;
+    padding: 10px 15px;
+    margin:20px 10px 0 0;
+    position: inherit;
+  }
+
   .u-section-1 {
     min-height: 394px;
   }
@@ -270,7 +499,7 @@
 .u-section-2 .u-shape-6 {
   width: 118px;
   height: 122px;
-  margin: -107px 134px 0 auto;
+  margin: -107px 1px 0 auto;
 }
 
 .u-section-2 .u-image-6 {
@@ -278,7 +507,7 @@
   height: 122px;
   background-image: url("images/jonathan.jpeg");
   background-position: 50% 50%;
-  margin: -137px auto 0 240px;
+  margin: -134px auto 0 240px;
 }
 
 .u-section-2 .u-text-5 {
@@ -673,9 +902,8 @@
   }
 
   .u-section-2 .u-text-6 {
-    margin-top: -59px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-top: -21px;
+    margin-left: 173px;
   }
 
   .u-section-2 .u-shape-7 {

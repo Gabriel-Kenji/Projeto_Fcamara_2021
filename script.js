@@ -6,7 +6,7 @@ function closeLogin() {
     document.getElementById("btnLogin").style.top = '-100%';
 }
 
-function alternarForm() {
-    var container = document.querySelector(".container-modal");
-    container.classList.toggle('active')
-}
+// function alternarForm() {
+//     var container = document.querySelector(".container-modal");
+//     container.classList.toggle('active')
+// }

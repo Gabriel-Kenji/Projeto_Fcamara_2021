@@ -56,7 +56,7 @@
                         </li>
                         <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 12px 20px;">Cadastre-se</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" onclick="openLogin()" style="padding: 12px 20px;">Entrar</a>
+                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" style="padding: 12px 20px; cursor: pointer" onclick="openLogin()">Entrar</a>
                         </li>
                     </ul>
                 </div>
@@ -77,7 +77,7 @@
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Cadastre-se</a>
                                 </li>
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;">Entrar</a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 20px;" onclick="openLogin()">Entrar</a>
                                 </li>
                             </ul>
                         </div>
@@ -98,8 +98,7 @@
                                 <br>
                             </h1>
                             <p class="u-text u-text-2">Uma iniciativa para unir todos por um propósito: a educação</p>
-                            <a class="u-active-palette-1-dark-2 u-btn u-btn-rectangle u-button-style u-custom-font u-font-pt-sans u-hover-palette-1-dark-2 u-palette-1-dark-3 u-radius-0 u-btn-1">saiba
-                mais sobre o nosso projeto</a>
+                            <a class="btn-saiba">saiba mais sobre o nosso projeto</a>
                         </div>
                     </div>
                     <div class="u-align-right u-container-style u-image u-layout-cell u-size-31 u-image-1">
@@ -133,15 +132,19 @@
                                 </div>
                                 <h6 class="u-text u-text-3">Rodrigo Lopes</h6>
                                 <h6 class="u-text u-text-4">Marina Machado</h6>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-5"></div>
-                                <div alt="" class="u-image u-image-circle u-image-5" data-image-width="634" data-image-height="634">
+                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-3"></div>
+                                <div alt="" class="u-image u-image-circle u-image-5" data-image-width="256" data-image-height="256">
                                 </div>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-6"></div>
-                                <div alt="" class="u-image u-image-circle u-image-6" data-image-width="960" data-image-height="1280">
+                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-4"></div>
+                                <div alt="" class="u-image u-image-circle u-image-6" data-image-width="960" data-image-height="968">
                                 </div>
-                                <h6 class="u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-5">Pedro Henrique Reis
-                                </h6>
+                                <h6 class="u-text u-text-3">Pedro H. Reis</h6>
                                 <h6 class="u-text u-text-6">Jonathan Ferreira</h6>
+                                
+
+
+
+                                
                                 <div class="u-shape u-shape-svg u-text-custom-color-3 u-shape-7" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0">
                                     <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 50" style="">
                     <use xlink:href="#svg-7f47"></use>
@@ -376,6 +379,50 @@
             <p class="u-small-text u-text u-text-variant u-text-1">Desenvolvido pelo Squad #29, no Programa de Formação 2021.
             </p>
         </div>
+    </footer>
+    <!-- MODAL LOGIN -->
+    <div class="bg-login" id="btnLogin">
+        <div class="modal">
+            
+            <div class="container-modal">
+                <span class="close-modal" onclick="closeLogin()">&times;</span>
+                <div class="user sign-in">
+                    <div class="img-bx"><img src="./images/wqe-min.jpg" ></div>
+                    <div class="form-bx">
+                        <form>
+                            <h2>Login</h2>
+                            <input type="email" name="" placeholder="email">
+                            <input type="password" name="" placeholder="senha">
+                            <input type="submit" name="" value="Login">
+                            <p class="link-sign-up">Não tem cadastro? <a href="#">Clique aqui</a> </p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- <div class="user sign-up">
+                    <div class="form-bx">
+                        <form>
+                            <h2>Criar conta</h2>
+                            <div class="users">
+                                <h3>Aluno</h3>
+                                <h3>Doador</h3>
+                                <h3>Escola</h3>
+                            </div>
+                            <input type="text" name="" placeholder="nome completo">
+                            <input type="email" name="" placeholder="email">
+                            <input type="password" name="" placeholder="senha">
+                            <input type="password" name="" placeholder="confirme senha">
+                            <input type="submit" name="" value="Cadastrar">
+                            <p class="link-sign-up">Já tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
+                        </form>
+                    </div>
+                    <div class="img-bx"><img src="./images/" ></div>
+
+                </div>  -->
+            </div>
+        </div>
+    </div>
+    
 </body>
 
 </html>
