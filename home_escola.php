@@ -1,15 +1,15 @@
 
 <?php
+include("_api/Select_Aluno_Escola.php");
 
-session_start(); 
 //pegando os dados
 $id = $_SESSION['InepEscola'];
+
 
 //verificacao
 if(!isset($_SESSION['logado'])){
   header("Location: /projeto_fcamara_2021/index.html");
 }
-include("_api/Select_Aluno_Escola.php");
 
 ?>
 
@@ -47,16 +47,10 @@ include("_api/Select_Aluno_Escola.php");
 
     <?php
 
-    $cont = 0;
-        for($i=0 ; $i<=1; $i++ ){
-          if(isset($array[$cont]) && !empty($array[$cont])){
-              ?>
-                <h1 class="h3 mb-3 fw-normal"><?php echo $array[$cont][0] ?> </h1><?php
-              $cont++;
-              $i = 0;
-          
-        }
-      }
+    foreach($Aluno_EscolaDao->readselect($user) as $aluno):
+      echo "Alunos </br>";
+      echo $aluno['nm_aluno']."</br>";
+    endforeach;
     ?>
    
   </form>

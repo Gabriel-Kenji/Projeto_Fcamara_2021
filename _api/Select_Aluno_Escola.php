@@ -1,18 +1,10 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
-    $user = new \_api\Classes\Class_aluno();
-    $user->setInep($id);
-
+session_start();
+    $user = new \_api\Classes\Class_escola();
+    $user->setInep($_SESSION['InepEscola']);
     $Aluno_EscolaDao = new \_api\Classes\DaoAlunoEscola();
-    $Aluno_EscolaDao->readselect();
-    
-    $cont = 0;
-    $array = [];    
+    $Aluno_EscolaDao->readselect($user);
 
-    foreach($Aluno_EscolaDao->readselect() as $aluno):
-        $array[$cont] = array (
-            $aluno["nm_aluno"]);
-        $cont++;
-    endforeach;
 
 ?>

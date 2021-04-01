@@ -18,7 +18,7 @@ session_start();
     {
         foreach($LoginDao->read($user) as $login):
             $senha = $login['nm_senha'];
-            $id = $login['cd_usuario'];
+            $id = $login['cd_INEP'];
             $nomeuser = $login['nm_escola'];
             
         endforeach;

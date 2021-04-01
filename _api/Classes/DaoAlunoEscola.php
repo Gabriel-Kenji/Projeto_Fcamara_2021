@@ -3,7 +3,7 @@ namespace _api\Classes;
 
 Class DaoAlunoEscola
 {
-    public function readselect(Class_Aluno $p){
+    public function readselect(Class_escola $p){
 
         //puxando dados do banco
         $sql = 'SELECT * FROM tb_aluno where cd_INEP = ?';
