@@ -8,68 +8,27 @@
     <link rel="stylesheet" href="doacao.css">
 </head>
 
-<style>
+<body onload="listarItens()">
+
+    <div class="centro">
+        <div class="conteudo">
+            <h2>Seleciona os itens da sua doação:</h2>
+            <div class="form">
+                <form action="" method="post">
+                    <table id="lista">
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantidade</th>
+                            <th>Quantidade escola</th>
+                        </tr>
+                    </table>
+                    <input type="submit" name="" value="Finalizar">
+                </form>
+            </div>
+        </div>
+    </div>
     
-</style>
-
-<body>
-    <form action="" method="post">
-        <ul ></ul>
-        <input type="button" onclick="listarItens()" value="Clique">
-    </form>
-
-    <table id="lista">
-        <tr>
-          <th>Item</th>
-          <th>Quantidade</th>
-          <th>Quantidade escola</th>
-        </tr>
-    </table>
-
-    
-
-    <script>
-        function listarItens(){
-            let itens = ["caderno", "lapis", "caneta", "Michel"];
-            let lista = document.getElementById('lista');
-                for(var i = 0; i < itens.length; i++) {
-                    let linha = document.createElement('tr')
-                    let item = document.createElement('td');
-                    let buttons = document.createElement('td');
-
-                    let buttonAcrecimo = document.createElement('a')
-                    buttonAcrecimo.classList.add('classe')
-                    buttonAcrecimo.innerHTML = `<button onclick="somaQnt(${i})">+</button>`
-
-                    let quantidade = document.createElement('div')
-                    quantidade.innerHTML = `<input id="${i}" value=0 disabled="disabled"></input>`
-
-                    let buttonDescrecimo = document.createElement('a')
-                    buttonDescrecimo.innerHTML = `<button onclick="subtraiQnt(${i})">-</button>`
-
-                    item.appendChild(document.createTextNode(itens[i]));
-                    lista.appendChild(linha);
-                    linha.appendChild(item)
-                    linha.appendChild(buttons);
-                        buttons.appendChild(buttonDescrecimo)
-                        buttons.appendChild(quantidade)
-                        buttons.appendChild(buttonAcrecimo)
-                }
-        }
-
-        function subtraiQnt(id) {
-            let quantidade = document.getElementById(id).value;
-            let subtracao = 1;
-            let total = parseInt(quantidade) - parseInt(subtracao);
-            document.getElementById(id).value = total;
-        }
-
-        function somaQnt(id) {
-            let quantidade = document.getElementById(id).value;
-            let soma = 1;
-            let total = parseInt(quantidade) + parseInt(soma);
-            document.getElementById(id).value = total;
-        }
-    </script>
 </body>
+<script type="text/javascript" src="script.js"></script>
+
 </html>
