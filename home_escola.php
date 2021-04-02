@@ -46,11 +46,29 @@ if(!isset($_SESSION['logado'])){
     <!-- <img class="mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
 
     <?php
-
+    $count = 0;
+    ?>
+    <form name="ra" action="_api/Pedidos_Escola_Aluno.php" method="post">
+    <input type="hidden" name="ra" value="<?php echo $id; ?>">
+    </form>
+    <?php
     foreach($Aluno_EscolaDao->readselect($user) as $aluno):
-      echo "Alunos </br>";
-      echo $aluno['nm_aluno']."</br>";
+      echo "Aluno : ";
+      echo $aluno['nm_aluno'];
+      $id = $aluno['cd_RA'];
+
+      ?> 
+      <form name="ra" action="_api/Pedidos_Escola_Aluno.php" method="post">
+      <input type="hidden" name="ra" value="<?php echo $id; ?>">
+      <input type="submit" value="Verificar Pedidos">
+      </br>
+      </br>
+
+      </form>
+      <?php
+      $count++;
     endforeach;
+    
     ?>
    
   </form>
