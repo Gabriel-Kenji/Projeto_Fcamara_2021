@@ -4,8 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="keywords" content="INTUITIVE">
     <meta name="description" content="">
-    <title>aFetivo - dashboard-doador</title>
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>aFetivo - Escolha aluno</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="dashboard-doador.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
@@ -13,11 +15,11 @@
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 </head>
 
-<body>
+<body class="u-body">
     <header class="u-clearfix u-header u-header" id="sec-8ab9">
         <div class="u-clearfix u-sheet u-sheet-1">
-            <a class="u-image u-logo u-image-1">
-                <img src="images/logoAfetivo.png" class="">
+            <a class="u-image u-logo u-image-1" data-image-width="150" data-image-height="56">
+                <img src="images/logoAfetivo_150.png" data-image-width="94">
             </a>
             <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
                 <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
@@ -77,14 +79,38 @@
         <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-align-left u-border-3 u-border-white u-container-style u-expanded-width u-group u-radius-30 u-shape-round u-white u-group-1">
                 <div class="u-container-layout u-container-layout-1">
-                    <h1 class="u-heading-font u-text u-title u-text-1">Bem vin​do, [doador]! </h1>
-                    <a href="#" class="u-active-palette-1-dark-2 u-btn u-btn-round u-button-style u-custom-color-4 u-hover-palette-1-light-2 u-radius-30 u-text-body-color u-btn-1">deseja
-            realizar uma doação?</a>
-                    <a href="#" class="u-active-palette-1-dark-2 u-btn u-btn-round u-button-style u-custom-color-4 u-hover-palette-1-light-2 u-radius-30 u-text-body-color u-btn-2" style="
-                    top: 6px;
-                ">doações
-            em andamento</a>
-                    <h4 class="u-text u-text-2">Histórico de doaç​ões feitas </h4>
+                    <!-- verificar motivo de não pegar do arquivo css -->
+                    <div class="div-VoltarPasso" style="display: flex; 
+                    justify-content: space-between;">
+                        <a class="u-heading-font u-text u-title u-text-8">Voltar</a>
+                        <a class="u-heading-font u-text u-title u-text-8">Passo a passo</a><br>
+                    </div>
+                    <h4>[doador], preencha com atenção para finalizar com sucesso</h4><br>
+
+                    <div class="div-form-es">
+                        <form action="">
+                            <select name="cars" id="cars">
+                        <option value="select">Selecione seu estado</option>
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                        <option value="option3">option3</option>
+                      </select>
+                            <select name="cars" id="cars">
+                        <option value="select">Selecione sua cidade</option>
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                        <option value="option3">option3</option>
+                      </select>
+                            <select name="cars" id="cars">
+                        <option value="select">Selecione sua escola</option>
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                        <option value="option3">option3</option>
+                      </select>
+                            <br><br>
+                        </form>
+                    </div>
+
                     <div class="u-table u-table-responsive u-table-1">
                         <table class="u-table-entity">
                             <colgroup>
@@ -96,25 +122,14 @@
                             </colgroup>
                             <tbody class="u-table-alt-palette-1-light-3 u-table-body">
                                 <tr style="height: 53px;">
-                                    <td class="u-table-cell">Caderno</td>
-                                    <td class="u-table-cell">24/03/2021</td>
-                                    <td class="u-table-cell">20213265485</td>
-                                    <td class="u-table-cell">24/05/2021</td>
-                                    <td class="u-table-cell">EEEM Agenor Roris</td>
+                                    <td class="u-table-cell">RA</td>
+                                    <td class="u-table-cell">Solicitação</td>
+                                    <td class="u-table-cell"></td>
                                 </tr>
                                 <tr style="height: 53px;">
-                                    <td class="u-table-cell">Caixa de lápis</td>
+                                    <td class="u-table-cell">RA do Joãozinho</td>
                                     <td class="u-table-cell">22/02/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">22/04/2021</td>
-                                    <td class="u-table-cell">EEEM Maura Abaurre</td>
-                                </tr>
-                                <tr style="height: 53px;">
-                                    <td class="u-table-cell">Cola</td>
-                                    <td class="u-table-cell">23/04/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">Description</td>
-                                    <td class="u-table-cell">EEEM Agenor Roris</td>
+                                    <td class="u-table-cell">Ver mais</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -123,13 +138,13 @@
             </div>
         </div>
     </section>
-
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-87cb">
         <div class="u-clearfix u-sheet u-sheet-1">
             <p class="u-small-text u-text u-text-variant u-text-1">Desenvolvido pelo Squad #29, no Programa de Formação 2021.
             </p>
         </div>
     </footer>
+    </section>
 </body>
 
 </html>
