@@ -66,8 +66,8 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
             {
                 foreach($LoginDaoDoador->read($Doador) as $loginDoador):
                     $senha = $loginDoador['nm_senha'];
-                    $id = $loginDoador['cd_RA'];
-                    $nomeuser = $loginDoador['nm_aluno'];
+                    $id = $loginDoador['cd_CPF'];
+                    $nomeuser = $loginDoador['nm_doador'];
                     
                 endforeach;
                 if($senha == $psenha)
@@ -110,8 +110,8 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                 {
                     foreach($LoginDaoEscola->read($Escola) as $loginEscola):
                         $senha = $loginEscola['nm_senha'];
-                        $id = $loginEscola['cd_RA'];
-                        $nomeuser = $loginEscola['nm_aluno'];
+                        $id = $loginEscola['cd_INEP'];
+                        $nomeuser = $loginEscola['nm_escola'];
                         
                     endforeach;
                     if($senha == $psenha)
