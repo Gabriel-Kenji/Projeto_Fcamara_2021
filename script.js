@@ -62,3 +62,49 @@ const pesquisarCep = async() => {
 document.getElementById('cep')
         .addEventListener('focusout', pesquisarCep);
 
+
+// DOACAO  
+
+function listarItens(){
+    let itens = ["caderno", "lapis", "caneta", "Michel"];
+    let lista = document.getElementById('lista');
+        for(var i = 0; i < itens.length; i++) {
+            let linha = document.createElement('tr')
+            let item = document.createElement('td');
+            let buttons = document.createElement('td');
+
+            let buttonAcrecimo = document.createElement('a')
+            buttonAcrecimo.innerHTML = `<button onclick="somaQnt(${i})">+</button>`
+
+            let quantidade = document.createElement('div')
+            quantidade.innerHTML = `<input id="${i}" value=0 disabled="disabled"></input>`
+
+            let buttonDescrecimo = document.createElement('a')
+            buttonDescrecimo.innerHTML = `<button onclick="subtraiQnt(${i})">-</button>`
+
+            item.appendChild(document.createTextNode(itens[i]));
+            lista.appendChild(linha);
+            linha.appendChild(item)
+            linha.appendChild(buttons);
+                buttons.appendChild(buttonDescrecimo)
+                buttons.appendChild(quantidade)
+                buttons.appendChild(buttonAcrecimo)
+                buttons.classList.add('colunaQnt')
+        }
+}
+
+function subtraiQnt(id) {
+    event.preventDefault();
+    let quantidade = document.getElementById(id).value;
+    let subtracao = 1;
+    let total = parseInt(quantidade) - parseInt(subtracao);
+    document.getElementById(id).value = total;
+}
+
+function somaQnt(id) {
+    event.preventDefault();
+    let quantidade = document.getElementById(id).value;
+    let soma = 1;
+    let total = parseInt(quantidade) + parseInt(soma);
+    document.getElementById(id).value = total;
+}
