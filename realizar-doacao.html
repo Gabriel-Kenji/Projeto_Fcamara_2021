@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação</title>
+    <link rel="stylesheet" href="./css/realizar-doacao.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h2>Selecione o local de doação:</h2>
+            <div class="select-location">
+                <div class="location">
+                    <h3>Seleciona o estado:</h3>
+                    <select name="estado" id="estado" onchange="buscaCidades(this.value)">
+                        <option value="">Selecione o Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceara</option>
+                        <option value="DF">Distrito Feredral</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="PR">Paraná</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div class="location">
+                    <h3>Seleciona a cidade</h3>
+                    <select id="cidade">
+                    </select>
+                </div>
+
+                <div class="location">
+                    <h3>Seleciona a escola:</h3>
+                    <select name="escola" id="escola">
+                        <option value="escola1">escola1</option>
+                        <option value="escola2">escola2</option>
+                        <option value="escola3">escola3</option>
+                        <option value="escola4">escola4</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="list-students">
+
+                <button onclick="openModal()">abrir modal</button>
+            </div>
+        </div>
+    </div>
+  
+
+    <div class="bg-modal" id="bg-modal">
+        <div class="modal">
+
+            <div class="container-modal">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <h3>Aluno:</h5>
+                <div class="information">
+                    <p>Escola:</p>
+                    <p>Data da solicitação:</p>
+                </div>
+                <div>
+                    <h3>Lista de materiais:</h3>
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <td>Item</td>
+                                <td>Quantidade</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>borracha</td>                                
+                            </tr>
+                            <tr>
+                                <td>caneta</td>    
+                            </tr>
+                            <tr>
+                                <td>caderno</td>
+                            </tr>
+                            <tr>
+                                <td>lapis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="./selecao-materiais.html">confirmar doação</a> 
+                </div>
+                        
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+<script type="text/javascript" src="./js/scriptRD.js"></script>
+
+</html>

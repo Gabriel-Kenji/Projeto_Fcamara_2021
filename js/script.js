@@ -46,7 +46,6 @@ const pesquisarCep = async() => {
     const cep = document.getElementById('cep').value;
     const url = `http://viacep.com.br/ws/${cep}/json/`;
         if(cepValido(cep)){
-
             const dados = await fetch(url)
             const endereco = await dados.json();
             if(endereco.hasOwnProperty('erro')){
@@ -63,7 +62,7 @@ document.getElementById('cep')
         .addEventListener('focusout', pesquisarCep);
 
 
-// DOACAO  
+// SELECAO MATERIAIS  
 
 function listarItens(){
     let itens = ["caderno", "lapis", "caneta", "Michel"];
@@ -93,18 +92,19 @@ function listarItens(){
         }
 }
 
-function subtraiQnt(id) {
+function subtraiQnt(item) {
     event.preventDefault();
-    let quantidade = document.getElementById(id).value;
+    let quantidade = document.getElementById(item).value;
     let subtracao = 1;
     let total = parseInt(quantidade) - parseInt(subtracao);
-    document.getElementById(id).value = total;
+    document.getElementById(item).value = total;
 }
 
-function somaQnt(id) {
+function somaQnt(item) {
     event.preventDefault();
-    let quantidade = document.getElementById(id).value;
+    let quantidade = document.getElementById(item).value;
     let soma = 1;
     let total = parseInt(quantidade) + parseInt(soma);
-    document.getElementById(id).value = total;
+    document.getElementById(item).value = total;
 }
+
