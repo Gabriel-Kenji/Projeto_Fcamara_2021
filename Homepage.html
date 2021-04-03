@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Homepage</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/nicepage.css" media="screen">
     <link rel="stylesheet" href="Homepage.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i|Oswald:200,300,400,500,600,700">
 </head>
@@ -388,15 +388,15 @@
                 <div class="user sign-in">
                     <div class="img-bx"><img src="./images/wqe-min.jpg"></div>
                     <div class="form-bx">
-                        <form>
+                        <form method="POST" action="_api/Login.php" >
                             <h2>Login</h2>
                             <select name="usuarios" id="usuarios">
                                 <option value="Aluno">Aluno</option>
                                 <option value="Doador">Doador</option>
                                 <option value="Escola">Escola</option>
                               </select>
-                            <input type="email" name="" placeholder="E-mail">
-                            <input type="password" name="" placeholder="Senha">
+                            <input type="email" name="email" placeholder="E-mail">
+                            <input type="password" name="senha" placeholder="Senha">
                             <input type="submit" name="" value="Login">
                             <p class="link-sign-up">Não tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
                         </form>
@@ -442,7 +442,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
