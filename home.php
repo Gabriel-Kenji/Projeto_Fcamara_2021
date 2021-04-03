@@ -6,17 +6,15 @@ $id = $_SESSION['idusuario'];
 if(!isset($_SESSION['logado']))
 header("Location: /projeto_fcamara_2021/index.html");
 ?>
- 
 
-    <!doctype html>
+
+ <!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.80.0">
-    <title>Signin Template </title>
+    <title>HOME </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -40,7 +38,7 @@ header("Location: /projeto_fcamara_2021/index.html");
     <br/>
     <br/>
     <!-- <img class="mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
-    <h1 class="h3 mb-3 fw-normal">Cadastre uma escola</h1> 
+    <!-- <h1 class="h3 mb-3 fw-normal">Cadastre uma escola</h1> 
 
     <input name="cd_inep" type="text" id="cd_inep" class="form-control validate" placeholder="Digite o Codigo INEP da escola" required>
   
@@ -93,8 +91,8 @@ header("Location: /projeto_fcamara_2021/index.html");
 <script type="text/javascript">
     $("#cd_inep").mask("00000000");
     $("#cd_cep").mask("00000-000");
-</script>
+</script> -->
 
-    
+
   </body>
 </html>

@@ -1,16 +1,15 @@
 <?php
 namespace _api\Classes;
 
-Class DaoCep
+Class DaoLogin_Doador
 {
-    public function read(Class_Escola $p){
+    public function read(Class_Doador $p){
 
         //puxando dados do banco
-        $sql = 'SELECT * From tb_escolas WHERE nm_cidade = ? and sg_uf = ?';
+        $sql = 'SELECT * From tb_doador WHERE nm_email = ?';
 
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $p->getCidade());
-        $stmt->bindValue(2, $p->getEstado());
+        $stmt->bindValue(1, $p->getEmail());
         $stmt->execute();
 
         if($stmt->rowCount() > 0):
