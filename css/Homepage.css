@@ -1,3 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+  
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.6s;
+    padding:  0px 100px;
+    z-index: 1000;
+    background-color: #fff;
+  }
+  
+  header.sticky {
+      padding: -5px 100px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px -2px #9098a9;
+  }
+  
+  header.sticky .logo,
+  header.sticky ul li a {
+    color: black;
+  }
+  
+  header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #89d0ca;
+    text-decoration: none;
+    font-size:2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+  }
+  
+  header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header ul li {
+    position: relative;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: .5s;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  header ul li .signup {
+    width: 150px;
+    border: 1px solid #89d0ca;
+    border-radius: 8px;
+    height: 40px;
+    margin-left: 15px;
+    font-weight: 700;
+    font-size:0.95em;
+    cursor: pointer;
+    background-color: #fff;
+    color: #89d0ca;
+    transition: .5s;
+    box-shadow: 0 1px 3px -2px #9098a9;
+  }
+  
+  header ul li .login {
+    background-color: #89d0ca;
+    color: #fff;
+    width: 150px;
+    border: 1px solid #89d0ca;
+    border-radius: 8px;
+    height: 40px;
+    margin-left: 15px;
+    font-weight: 700;
+    font-size:0.95em;
+    cursor: pointer;
+    color: #fff;
+    transition: .5s;
+    box-shadow: 0 1px 3px -2px #9098a9;
+  }
+  
+  header ul li:hover .login{
+    background-color: rgba(137,208,208, 0.60);
+    border: 1px solid rgba(137,208,208, 0.60);
+  }
+  
+  header ul li:hover .signup{
+    background-color: rgba(46, 173, 173, 0.2);
+    border: 1px solid rgba(137,208,208, 0.2);
+  }
+
+.ajuste {
+    margin-top: 30px;
+}
+
+.text-inicial {
+    padding: 80px 70px 0 0;
+    color: #292E33;
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+}
+
 .u-section-1 {
     min-height: 731px;
     background-image: url("../images/f11de0f4-f885-ea85-b5cd-4a7f2abced16.jpg");
@@ -35,13 +161,14 @@
     color: #fff;
     background-color: #292e33;
     text-align: center;
-    padding: 10px 40px;
-    margin: 20px 174px 0 -17px;
-    border-radius: 25px;
+    padding: 15px 50px;
+    margin: 20px 10px -17px;
+    border-radius: 8px;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
     position: absolute;
+    letter-spacing: 0.15em;
 }
 
 .btn-saiba:hover {
@@ -407,7 +534,7 @@
 .u-section-2 .u-image-1 {
     width: 123px;
     height: 122px;
-    background-image: url("../images/kenji.jpeg");
+    background-image: url("../images/hp/kenji.png");
     background-position: 50% 50%;
     margin: -137px auto 0 4px;
 }
@@ -421,7 +548,7 @@
 .u-section-2 .u-image-2 {
     width: 123px;
     height: 122px;
-    background-image: url("../images/maressa.jpeg");
+    background-image: url("../images/hp/maressa.png");
     background-position: 50% 50%;
     margin: -137px auto 0 253px;
 }
@@ -443,7 +570,7 @@
 .u-section-2 .u-image-3 {
     width: 123px;
     height: 122px;
-    background-image: url("../images/rodrigo.png");
+    background-image: url("../images/hp/rodrigo.png");
     background-position: 50% 50%;
     margin: -137px auto 0 4px;
 }
@@ -457,7 +584,7 @@
 .u-section-2 .u-image-4 {
     width: 123px;
     height: 122px;
-    background-image: url("../images/marina.jpeg");
+    background-image: url("../images/hp/marina.png");
     background-position: 50% 50%;
     margin: -137px auto 0 255px;
 }
@@ -479,7 +606,7 @@
 .u-section-2 .u-image-5 {
     width: 123px;
     height: 122px;
-    background-image: url("../images/profile2.jpg");
+    background-image: url("../images/hp/pedro.png");
     background-position: 50% 50%;
     margin: -137px auto 0 4px;
 }
@@ -493,9 +620,9 @@
 .u-section-2 .u-image-6 {
     width: 123px;
     height: 122px;
-    background-image: url("../images/jonathan.jpeg");
+    background-image: url("../images/hp/jonathan\ 2.png");
     background-position: 50% 50%;
-    margin: -134px auto 0 240px;
+    margin: -134px auto 0 255px;
 }
 
 .u-section-2 .u-text-5 {
@@ -906,7 +1033,7 @@
         padding-right: 30px;
     }
     .u-section-3 .u-text-1 {
-        font-family: Roboto, sans-serif;
+        font-family: 'Poppins', sans-serif;
         margin-right: 0;
     }
     .u-section-3 .u-layout-cell-2 {

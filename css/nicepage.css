@@ -3857,7 +3857,7 @@ span.fr-img-caption.fr-view.fr-dii.fr-fir {
 /*! normalize.css v4.1.1 | MIT License */
 
 html {
-    font-family: sans-serif;
+    font-family: "Poppins";
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -19496,7 +19496,7 @@ p {
 }
 
 .u-font-roboto.u-custom-font {
-    font-family: Roboto, sans-serif !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .u-font-open-sans.u-custom-font {
@@ -19512,7 +19512,7 @@ p {
 }
 
 .u-font-roboto-condensed.u-custom-font {
-    font-family: 'Roboto Condensed', sans-serif !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .u-font-source-sans-pro.u-custom-font {
@@ -19544,7 +19544,7 @@ p {
 }
 
 .u-font-roboto-slab.u-custom-font {
-    font-family: 'Roboto Slab', serif !important;
+    font-family: 'Poppins', sans-serif;
 }
 
 .u-font-playfair-display.u-custom-font {
@@ -22857,7 +22857,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Roboto, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -22893,7 +22893,7 @@ h6 {
 }
 
 .u-custom-font.u-heading-font {
-    font-family: Roboto, sans-serif !important;
+    font-family: 'Poppins', sans-serif;;
 }
 
 

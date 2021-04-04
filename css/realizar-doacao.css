@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Raleway, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
   
 html, body {
@@ -9,6 +10,104 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.6s;
+  padding:  20px 100px;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+header.sticky {
+    padding: 10px 100px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px -2px #9098a9;
+}
+
+header.sticky .logo,
+header.sticky ul li a {
+  color: black;
+}
+
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #89d0ca;
+  text-decoration: none;
+  font-size:2em;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+  justify-content: center;
+}
+
+header ul li a{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: .5s;
+}
+
+header ul li .signup {
+  width: 150px;
+  border: 1px solid #89d0ca;
+  border-radius: 8px;
+  height: 40px;
+  margin-left: 15px;
+  font-weight: 700;
+  font-size:0.95em;
+  cursor: pointer;
+  background-color: #fff;
+  color: #89d0ca;
+  transition: .5s;
+  box-shadow: 0 1px 3px -2px #9098a9;
+}
+
+header ul li .login {
+  background-color: #89d0ca;
+  color: #fff;
+  width: 150px;
+  border: 1px solid #89d0ca;
+  border-radius: 8px;
+  height: 40px;
+  margin-left: 15px;
+  font-weight: 700;
+  font-size:0.95em;
+  cursor: pointer;
+  color: #fff;
+  transition: .5s;
+  box-shadow: 0 1px 3px -2px #9098a9;
+}
+
+header ul li:hover .login{
+  background-color: rgba(137,208,208, 0.60);
+  border: 1px solid rgba(137,208,208, 0.60);
+}
+
+header ul li:hover .signup{
+  background-color: rgba(46, 173, 173, 0.2);
+  border: 1px solid rgba(137,208,208, 0.2);
 }
 
 .container {
@@ -28,7 +127,7 @@ html, body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   border-radius: 10px;
   box-sizing: border-box;
   overflow: auto;
@@ -38,6 +137,7 @@ html, body {
 .select-location {
   display: flex;
   justify-content: center;
+ 
 }
 
 .select-location .location {
@@ -47,12 +147,19 @@ html, body {
 .select-location .location select {
   width: 250px;
   height: 40px;
+  box-shadow: 0 1px 3px -2px #9098a9;
+  border: 1px solid #e8eaed;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden;
 }
 
-
+.select-location .location select::-webkit-scrollbar {
+	display: none;
+}
 
 .list-students {
-  height: 50vh;
+  height: 60%;
   width: 90vw;
   background-color: #fff;
   border: 1px solid #89d0ca;
@@ -60,12 +167,8 @@ html, body {
   border-radius: 8px;
   box-sizing: border-box;
   overflow: auto;
-  padding: 50px 40px 30px;
+  padding: 0 40px 30px;
 }
-
-
-
-/* MODAL2 */
 
 .bg-modal {
   width: 100%;
@@ -110,13 +213,12 @@ html, body {
 .container-modal {
   position: relative;
   width: 360px;
-  height: 360px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   font-family: 'PT Sans', sans-serif;
   background-color: #fff;
   border-radius: 8px;
-  padding: 50px 50px;
+  padding: 30px 30px;
 }
 
 .container-modal .information {
@@ -131,25 +233,64 @@ html, body {
   width: 80%;
 }
 
+.content-table thead tr td {
+  font-weight: 600;
+}
 
 .container-modal a {
   background-color: #292e33;
   color: #fff;
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 1.0em;
   border: none;
   outline: none;
   box-shadow: none;
   font-weight: 500;
   transition: .5s;
-  text-transform: uppercase;
   font-weight: 700;
   border-radius: 8px;
-  margin-top: 30px;
+  margin-top: 100px;
   padding: 5px 20px;
   text-decoration: none;
+  text-align: center;
 }
 
 .container-modal a:hover {
+  background-color: rgb(66, 84, 101);
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 0.9em;
+  /* min-width: 480px; */
+  width: 80%;
+  text-align: center;
+}
+
+.content-table tr td{
+  height: 50px;
+}
+
+
+
+.content-table button {
+  background-color: #292e33;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.0em;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-weight: 500;
+  transition: .5s;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.content-table button:hover {
   background-color: rgb(66, 84, 101);
 }

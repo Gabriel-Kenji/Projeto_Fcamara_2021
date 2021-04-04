@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doação</title>
     <link rel="stylesheet" href="./css/realizar-doacao.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <a href="#" class="logo">aFetivo</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Dicas</a></li>
+            <li><button class="signup">Cadastre-se</button></li>
+            <li><button class="login">Entrar</button></li>
+        </ul>
+    </header>
 
     <div class="container">
         <div class="content">
+            <div>
+                <p>[] voltar</p>
+                <p>ICONS</p>
+            </div>
             <h2>Selecione o local de doação:</h2>
             <div class="select-location">
                 <div class="location">
@@ -64,8 +81,69 @@
 
             </div>
             <div class="list-students">
-
-                <button onclick="openModal()">abrir modal</button>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <td>RA</td>
+                            <td>data solicitação</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>[01020305]</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                        <tr>
+                            <td>01020304</td>
+                            <td>03/04</td>
+                            <td><button onclick="openModal()">ver +</button></td>
+                        </tr>
+                 
+                    </tbody>
+                </table>
+                
             </div>
         </div>
     </div>
@@ -76,10 +154,10 @@
 
             <div class="container-modal">
                 <span class="close-modal" onclick="closeModal()">&times;</span>
-                <h3>Aluno:</h5>
+                <h3>Aluno:[]</h5>
                 <div class="information">
-                    <p>Escola:</p>
-                    <p>Data da solicitação:</p>
+                    <p>Escola:[]</p>
+                    <p>Data da solicitação:[]</p>
                 </div>
                 <div>
                     <h3>Lista de materiais:</h3>

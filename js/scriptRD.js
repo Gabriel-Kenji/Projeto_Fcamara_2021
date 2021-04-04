@@ -1,5 +1,10 @@
 
 
+window.addEventListener("scroll", function() {
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+})
+
 function openModal() {
     document.getElementById("bg-modal").style.top = '0';
     var container = document.querySelector(".container-modal");
