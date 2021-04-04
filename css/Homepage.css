@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: all 0.6s;
-    padding:  0px 100px;
+    padding:  0px 250px;
     z-index: 1000;
     background-color: #fff;
   }
@@ -30,21 +30,27 @@ header {
       padding: -5px 100px;
       background-color: #fff;
       box-shadow: 0 1px 3px -2px #9098a9;
-  }
+}
   
-  header.sticky .logo,
-  header.sticky ul li a {
-    color: black;
-  }
+header.sticky .logo,
+header.sticky ul li a {
+    color: #292E33;
+}
   
-  header .logo {
+header .logo {
     position: relative;
     font-weight: 700;
-    color: #89d0ca;
     text-decoration: none;
     font-size:2em;
-    letter-spacing: 2px;
+    letter-spacing: 0.3px;
     transition: 0.6s;
+    color: #292E33;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+header .logo::first-letter{
+      color: #89d0ca;
   }
   
   header ul {
@@ -92,7 +98,7 @@ header {
     border: 1px solid #89d0ca;
     border-radius: 8px;
     height: 40px;
-    margin-left: 15px;
+    margin-left: 30px;
     font-weight: 700;
     font-size:0.95em;
     cursor: pointer;
@@ -146,7 +152,7 @@ header {
 .u-section-1 .u-text-1 {
     letter-spacing: normal;
     text-transform: none;
-    font-family: Raleway, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     margin: 223px 18px 0 -17px;
 }
@@ -244,6 +250,7 @@ header {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     font-family: 'PT Sans', sans-serif;
+    border-radius: 8px;
 }
 
 .container-modal .user {
