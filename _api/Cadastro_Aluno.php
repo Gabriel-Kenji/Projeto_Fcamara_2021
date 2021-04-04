@@ -1,19 +1,19 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 session_start();
-if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) && !empty($_POST['senha']) && isset($_POST['senhaconf']) && !empty($_POST['senhaconf']) && isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['sg_uf']) && !empty($_POST['sg_uf']) && isset($_POST['cidade']) && !empty($_POST['cidade']) && isset($_POST['bairro']) && !empty($_POST['bairro'])&& isset($_POST['inep']) && !empty($_POST['inep'])){
+if(isset($_POST['numeroRA']) && !empty($_POST['numeroRA']) && isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['password']) && !empty($_POST['password']) && isset($_POST['confirm-password']) && !empty($_POST['confirm-password']) && isset($_POST['nome']) && !empty($_POST['nome']) && isset($_POST['uf']) && !empty($_POST['uf']) && isset($_POST['cidade']) && !empty($_POST['cidade']) && isset($_POST['bairro']) && !empty($_POST['bairro'])&& isset($_POST['select-escola']) && !empty($_POST['select-escola'])){
   
     $user = new \_api\Classes\Class_Aluno();
 
-    $ra = $_POST['ra'];
+    $ra = $_POST['numeroRA'];
     $usuario = $_POST['nome'];
-    $senha = $_POST['senha'];
-    $senhaconf = $_POST['senhaconf'];
+    $senha = $_POST['password'];
+    $senhaconf = $_POST['confirm-password'];
     $email = $_POST['email'];
-    $estado = $_POST['sg_uf'];
+    $estado = $_POST['uf'];
     $cidade = $_POST['cidade'];
     $bairro = $_POST['bairro'];
-    $inep = $_POST['inep'];
+    $inep = $_POST['select-escola'];
 
     $user->setRa($ra);
     $user->setEmail($email);
@@ -41,7 +41,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) &
                 $DaoCadastroAluno->create_com_telefone($user);
                 $_SESSION['erro_cad'] = 4;
                 echo "foi";
-                header("Location: ../login_aluno.html");
+                header("Location: ../Homepage.html");
             }
             else{
                 //ERRO EMAIL JA EXISTENTE
@@ -79,7 +79,7 @@ else
 {
     echo "vazio";
     $_SESSION['erro_cad'] = 1;
-    header("Location: ../login_aluno.html");
+    //header("Location: ../login_aluno.html");
 }
 
 

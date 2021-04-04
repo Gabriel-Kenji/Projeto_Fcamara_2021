@@ -405,16 +405,16 @@
 
                 <div class="user sign-up">
                     <div class="form-bx">
-                        <form>
+                        <form action="_api/Selecao_Cadastro.php" method="POST">
                             <h2>Criar conta</h2>
                             <div class="users">
-                                <form>
+                                
                                     <div>
                                         <h3>Aluno</h3>
                                         <div class="img-cadastro">
                                             <img src="./images/aluno_300.png" alt="" srcset="">
                                         </div>
-                                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
+                                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="op1">
                                     </div>
                                     <div>
                                         <h3>Doador</h3>
@@ -431,7 +431,7 @@
                                         <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
                                     </div>
                                     <input type="submit" name="" value="Cadastrar">
-                                </form>
+                                
                             </div>
                             <p class="link-sign-up">Já tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
                         </form>
