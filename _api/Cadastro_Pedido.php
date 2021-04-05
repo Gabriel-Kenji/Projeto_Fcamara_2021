@@ -37,7 +37,7 @@ foreach($MaterialDao->read() as $material){
 
     }
     $contz++;
-
+    header("Location: ../dashboard-aluno.php");
 }
 
 

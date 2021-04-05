@@ -16,7 +16,7 @@ if(isset($_POST['id_escola']) && !empty($_POST['id_escola'])){
 ?>
         <tr>
             <form method="post" id="<?php echo "ajax_form".$cont ?>">
-                <td>[<?php echo $escola['cd_pedido'] ?>]</td>
+                <td>[<?php echo $escola['cd_RA'] ?>]</td>
                 <input type="hidden" name="pedido" value="<?php echo $escola['cd_pedido'] ?>">
                 <td>03/04</td>
                 <td><button onclick="openModal()">ver +</button></td>

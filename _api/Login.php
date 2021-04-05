@@ -33,7 +33,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                 $_SESSION['RaAluno'] = $id;
                 $_SESSION['logado'] = true;
                 $_SESSION['nomeuserlogado'] = $nomeuser;
-                header("Location: ../dashboard-aluno.html");
+                header("Location: ../dashboard-aluno.php");
                 
                 
             }
