@@ -1,4 +1,3 @@
-
 create database db_fcamara;
 
 use db_fcamara;
@@ -40,16 +39,24 @@ CREATE TABLE tb_status_pedido (
     PRIMARY KEY (cd_status)
 );
 
+
 CREATE TABLE tb_pedido (
     cd_pedido int NOT NULL AUTO_INCREMENT,
-    cd_status int NOT NULL,
-    cd_material int NOT NULL,
-    ds_quantidade int NOT NULL,
     cd_RA int NOT NULL,
     PRIMARY KEY (cd_pedido),
-    FOREIGN KEY (cd_status) REFERENCES tb_status_pedido(cd_status),
-    FOREIGN KEY (cd_RA) REFERENCES tb_aluno(cd_RA),
-    FOREIGN KEY (cd_material) REFERENCES tb_material(cd_material)
+    FOREIGN KEY (cd_RA) REFERENCES tb_aluno(cd_RA)
+);
+
+create table tb_pedido_material(
+	cd_pedido_material int not null AUTO_INCREMENT,
+	cd_pedido int not null,
+    cd_material int not null,
+    cd_status int NOT NULL,
+	ds_quantidade int NOT NULL,
+    PRIMARY KEY (cd_pedido_material),
+    FOREIGN KEY (cd_material) REFERENCES tb_material(cd_material),
+    FOREIGN KEY (cd_pedido) REFERENCES tb_pedido(cd_pedido),
+    FOREIGN KEY (cd_status) REFERENCES tb_status_pedido(cd_status)
 );
 
 CREATE TABLE tb_doador (
@@ -74,12 +81,18 @@ CREATE TABLE tb_doacao(
     cd_doacao int NOT NULL AUTO_INCREMENT,
     cd_status int NOT NULL,
     cd_CPF int NOT NULL,
-    ds_quantidade int NOT NULL,
-    cd_pedido int NOT NULL,
     PRIMARY KEY (cd_doacao),
     FOREIGN KEY (cd_status) REFERENCES tb_status_doacao(cd_status),
-    FOREIGN KEY (cd_CPF) REFERENCES tb_doador(cd_CPF),
-    FOREIGN KEY (cd_pedido) REFERENCES tb_pedido(cd_pedido)
+    FOREIGN KEY (cd_CPF) REFERENCES tb_doador(cd_CPF)
+);
+
+
+create table tb_doacao_material(
+	cd_pedido_material int not null,
+    cd_doacao int NOT NULL,
+	ds_quantidade int NOT NULL,
+    FOREIGN KEY (cd_pedido_material) REFERENCES tb_pedido_material(cd_pedido_material),
+    FOREIGN KEY (cd_doacao) REFERENCES tb_doacao(cd_doacao)
 );
 
 INSERT INTO `tb_status_pedido` (`cd_status`, `nm_status`) VALUES

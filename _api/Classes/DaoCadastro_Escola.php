@@ -18,7 +18,7 @@ class DaoCadastro_Escola{
     }
 
     public function create_com_telefone(Class_Escola $p){
-        $sql = 'INSERT INTO tb_escola (cd_INEP, nm_escola, nm_email, nm_senha, sg_estado, nm_cidade, nm_bairro, ds_telefone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+        $sql = 'INSERT INTO tb_escola (cd_INEP, nm_escola, nm_email, nm_senha, sg_estado, nm_cidade, nm_bairro, ds_telefone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
 
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getInep());

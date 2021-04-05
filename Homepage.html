@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Homepage</title>
+
     <link rel="stylesheet" href="./css/nicepage.css" media="screen">
     <link rel="stylesheet" href="./css/Homepage.css" media="screen">
+
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i|Oswald:200,300,400,500,600,700">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
@@ -328,15 +330,15 @@
                 <div class="user sign-in">
                     <div class="img-bx"><img src="./images/wqe-min.jpg"></div>
                     <div class="form-bx">
-                        <form>
+                        <form method="POST" action="_api/Login.php" >
                             <h2>Login</h2>
                             <select name="usuarios" id="usuarios">
                                 <option value="Aluno">Aluno</option>
                                 <option value="Doador">Doador</option>
                                 <option value="Escola">Escola</option>
                               </select>
-                            <input type="email" name="" placeholder="E-mail">
-                            <input type="password" name="" placeholder="Senha">
+                            <input type="email" name="email" placeholder="E-mail">
+                            <input type="password" name="senha" placeholder="Senha">
                             <input type="submit" name="" value="Login">
                             <p class="link-sign-up">Não tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
                         </form>
@@ -345,16 +347,16 @@
 
                 <div class="user sign-up">
                     <div class="form-bx">
-                        <form>
+                        <form action="_api/Selecao_Cadastro.php" method="POST">
                             <h2>Criar conta</h2>
                             <div class="users">
-                                <form>
+                                
                                     <div>
                                         <h3>Aluno</h3>
                                         <div class="img-cadastro">
                                             <img src="./images/aluno_300.png" alt="" srcset="">
                                         </div>
-                                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
+                                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="op1">
                                     </div>
                                     <div>
                                         <h3>Doador</h3>
@@ -371,7 +373,7 @@
                                         <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
                                     </div>
                                     <input type="submit" name="" value="Cadastrar">
-                                </form>
+                                
                             </div>
                             <p class="link-sign-up">Já tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
                         </form>
@@ -382,8 +384,8 @@
             </div>
         </div>
     </div>
-  
-    <script type="text/javascript" src="./js/script.js"></script>
+
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
