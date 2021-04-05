@@ -35,11 +35,6 @@ include("_api/Select_Material.php");
                     <a href="dashboard-aluno.php"><i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
-
-            <h1 class="u-heading-font u-text u-title u-text-1">Bem vin​do, [<?php echo $_SESSION['nomeuserlogado']; ?>] </h1>
-
-
-
             <h2>Seleciona os itens da sua doação:</h2>
             <div class="form">
                 <form action="_api/Cadastro_Pedido.php" method="post">
@@ -66,9 +61,9 @@ include("_api/Select_Material.php");
                                     <td>
                                         <div class="buttons">
                                             <button onclick="subtraiQnt('<?php echo $name ?>')">-</button>
-                                            <input type="range" min="0" max="10" id="<?php echo $name ?>" value="0" >
+                                            <input type="text" id="<?php echo $name ?>" name="<?php echo $name ?>" value="0" >
                                             <button onclick="somaQnt('<?php echo $name ?>')">+</button> 
-                                                    
+                                            
                                         </div>
                                     </td>
                                 </tr>  

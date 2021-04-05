@@ -105,27 +105,7 @@ include("_api/Select_Material.php");
                                 <col width="20%">
                             </colgroup>
                             <tbody class="u-table-alt-palette-1-light-3 u-table-body">
-                                <tr style="height: 53px;">
-                                    <td class="u-table-cell">Caderno</td>
-                                    <td class="u-table-cell">24/03/2021</td>
-                                    <td class="u-table-cell">20213265485</td>
-                                    <td class="u-table-cell">24/05/2021</td>
-                                    <td class="u-table-cell">EEEM Agenor Roris</td>
-                                </tr>
-                                <tr style="height: 53px;">
-                                    <td class="u-table-cell">Caixa de lápis</td>
-                                    <td class="u-table-cell">22/02/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">22/04/2021</td>
-                                    <td class="u-table-cell">EEEM Maura Abaurre</td>
-                                </tr>
-                                <tr style="height: 53px;">
-                                    <td class="u-table-cell">Cola</td>
-                                    <td class="u-table-cell">23/04/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">Description</td>
-                                    <td class="u-table-cell">EEEM Agenor Roris</td>
-                                </tr>
+                            <?php include("_api/ListaPedidoAluno.php"); ?>
                             </tbody>
                         </table>
                     </div>

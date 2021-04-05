@@ -114,13 +114,6 @@ include("_api/Select_Escolas_Doar.php");
                         <?php
                             include("_api/Pesquisa_pedidos.php");
                         ?>
-                        <tr>
-                            
-                                <td>[teste]</td>
-                                <input type="hidden" name="pedido" value="1">
-                                <td>03/04</td>
-                                <td><button onclick="openModal()">ver +</button></td>
-                        </tr>
                  
                     </tbody>
                 </table>
@@ -152,84 +145,6 @@ include("_api/Select_Escolas_Doar.php");
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>borracha</td>                                
-                            </tr>
-                            <tr>
-                                <td>caneta</td>    
-                            </tr>
-                            <tr>
-                                <td>caderno</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
-                            <tr>
-                                <td>lapis</td>
-                            </tr>
                             
                         </tbody>
                     </table>
