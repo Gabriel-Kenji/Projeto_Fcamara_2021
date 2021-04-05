@@ -118,8 +118,8 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                     {
                         $_SESSION['InepEscola'] = $id;
                         $_SESSION['logado'] = true;
-                        $_SESSION['nomeuserlogado'] = $nomeuser;    
-                        header("Location: ../home_escola.php");
+                         $_SESSION['nomeuserlogado'] = $nomeuser;    
+                        header("Location: ../dashboard-escola.php");
                         
                     }
                     else

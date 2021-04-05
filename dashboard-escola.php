@@ -4,11 +4,10 @@ include("_api/Select_Aluno_Escola.php");
 //pegando os dados
 $id = $_SESSION['InepEscola'];
 if(!isset($_SESSION['InepEscola'])){
-    header("Location: /projeto_fcamara_2021/homepage.html");
+    header("Location: homepage.html");
 }
 
 
-include("_api/Select_Aluno_Escola.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +23,7 @@ include("_api/Select_Aluno_Escola.php");
     <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 </head>
-
+ 
 <body>
     <header class="u-clearfix u-header u-header" id="sec-8ab9">
         <div class="u-clearfix u-sheet u-sheet-1">
@@ -90,7 +89,7 @@ include("_api/Select_Aluno_Escola.php");
             <div class="u-align-left u-border-3 u-border-white u-container-style u-expanded-width u-group u-radius-30 u-shape-round u-white u-group-1">
                 <div class="u-container-layout u-container-layout-1">
                     <h1 class="u-heading-font u-text u-title u-text-1">Nome da escola</h1>
-                    <h4 class="u-text u-text-2">Histórico de doaç​ões feitas </h4><br>
+                    <h4 class="u-text u-text-2">Histórico de doaç​ões feitas</h4><br>
                     <a href="#" class="u-btn u-btn-round u-button-style u-hover-palette-1-dark-2 u-palette-1-dark-3 u-radius-30  u-text-body-alt-color u-btn-1">alunos
             cadastrados</a>
                     <div class="u-table u-table-responsive u-table-1">
@@ -103,29 +102,7 @@ include("_api/Select_Aluno_Escola.php");
                                 <col width="20%">
                             </colgroup>
                             <tbody class="u-table-alt-palette-1-light-3 u-table-body">
-                                <tr style="height: 50px;">
-                                    <td class="u-table-cell">RA</td>
-                                    <td class="u-table-cell">24/03/2021</td>
-                                    <td class="u-table-cell">20213265485</td>
-                                    <td class="u-table-cell">24/05/2021</td>
-                                    <td class="u-table-cell">Ver mais</td>
-                                </tr>
-                                <tr style="height: 50px;">
-                                    <td class="u-table-cell">RA</td>
-                                    <td class="u-table-cell">22/02/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">22/04/2021</td>
-                                    <td class="u-table-cell">Ver mais</td>
-                                </tr>
-                                <tr style="height: 50px;">
-                                    <td class="u-table-cell">RA<br>
-                                    </td>
-                                    <td class="u-table-cell">23/04/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">20/06/2021</td>
-                                    <td class="u-table-cell">Ver mais<br>
-                                    </td>
-                                </tr>
+                                <?php include("_api/listaDoacaoEscola.php"); ?>
                             </tbody>
                         </table>
                     </div><br>
@@ -140,29 +117,7 @@ include("_api/Select_Aluno_Escola.php");
                                 <col width="20%">
                             </colgroup>
                             <tbody class="u-table-alt-palette-1-light-3 u-table-body">
-                                <tr style="height: 50px;">
-                                    <td class="u-table-cell">RA</td>
-                                    <td class="u-table-cell">24/03/2021</td>
-                                    <td class="u-table-cell">20213265485</td>
-                                    <td class="u-table-cell">24/05/2021</td>
-                                    <td class="u-table-cell">Ver mais</td>
-                                </tr>
-                                <tr style="height: 50px;">
-                                    <td class="u-table-cell">RA</td>
-                                    <td class="u-table-cell">22/02/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">22/04/2021</td>
-                                    <td class="u-table-cell">Ver mais</td>
-                                </tr>
-                                <tr style="height: 50px;">
-                                    <td class="u-table-cell">RA<br>
-                                    </td>
-                                    <td class="u-table-cell">23/04/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">20/06/2021</td>
-                                    <td class="u-table-cell">Ver mais<br>
-                                    </td>
-                                </tr>
+                                <?php include("_api/listaPedidoEscola.php"); ?>
                             </tbody>
                         </table>
                     </div>

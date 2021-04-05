@@ -134,6 +134,22 @@ Class DaoPedido
             return []; 
         endif;
     }
+
+    public function readListaPedidoEscola(Class_Aluno $p){
+
+        $sql = 'SELECT * FROM tb_pedido_material LEFT JOIN tb_material ON tb_material.cd_material = tb_pedido_material.cd_material LEFT JOIN tb_pedido ON tb_pedido.cd_pedido = tb_pedido_material.cd_pedido LEFT JOIN tb_aluno ON tb_pedido.cd_RA = tb_aluno.cd_RA LEFT JOIN tb_status_pedido ON tb_status_pedido.cd_status = tb_pedido_material.cd_status where tb_aluno.cd_INEP =  ?';
+
+        $stmt = Conexao::getConn()->prepare($sql);
+        $stmt->bindValue(1, $p->getInep());
+        $stmt->execute();
+
+        if($stmt->rowCount() > 0):
+            $resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            return $resultado;
+        else:
+            return []; 
+        endif;
+    }
 }
 
 ?>
