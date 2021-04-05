@@ -1,14 +1,14 @@
 <?php
 namespace _api\Classes;
 class Class_Pedido{
-    private $id_pedido, $ra, $status, $material;
+    private $pedido, $ra, $status, $material;
 
-    public function get_IdPedido(){
-        return $this->id_pedido;
+    public function getPedido(){
+        return $this->pedido;
     }
 
-    public function setIdPedido($id_pedido){
-        $this->id_pedido = $id_pedido;
+    public function setPedido($pedido){
+        $this->pedido = $pedido;
     }
     
     public function getRa(){
@@ -17,6 +17,22 @@ class Class_Pedido{
 
     public function setRa($ra){
         $this->ra = $ra;
+    }
+
+    public function getStatus(){
+        return $this->status;
+    }
+
+    public function setStatus($status){
+        $this->status = $status;
+    }
+
+    public function getMaterial(){
+        return $this->material;
+    }
+
+    public function setMaterial($material){
+        $this->material = $material;
     }
 
 }

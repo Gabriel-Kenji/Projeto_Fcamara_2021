@@ -1,13 +1,4 @@
-<?php
-session_start(); 
-//Verificacao e Coletando dados
-$id = $_SESSION['Doador'];
-if(!isset($_SESSION['Doador'])){
-    header("Location: /projeto_fcamara_2021/homepage.html");
-}
-
-?>
-
+<?php session_start();?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="pt-BR">
 
@@ -87,8 +78,8 @@ if(!isset($_SESSION['Doador'])){
         <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-align-left u-border-3 u-border-white u-container-style u-expanded-width u-group u-radius-30 u-shape-round u-white u-group-1">
                 <div class="u-container-layout u-container-layout-1">
-                    <h1 class="u-heading-font u-text u-title u-text-1">Bem vin​do, [doador]! </h1>
-                    <a href="#" class="u-active-palette-1-dark-2 u-btn u-btn-round u-button-style u-custom-color-4 u-hover-palette-1-light-2 u-radius-30 u-text-body-color u-btn-1">deseja
+                    <?php include("_api/doador.php"); ?>
+                    <a href="realizar-doacao.php" class="u-active-palette-1-dark-2 u-btn u-btn-round u-button-style u-custom-color-4 u-hover-palette-1-light-2 u-radius-30 u-text-body-color u-btn-1">deseja
             realizar uma doação?</a>
                     <a href="#" class="u-active-palette-1-dark-2 u-btn u-btn-round u-button-style u-custom-color-4 u-hover-palette-1-light-2 u-radius-30 u-text-body-color u-btn-2" style="
                     top: 6px;
@@ -105,27 +96,8 @@ if(!isset($_SESSION['Doador'])){
                                 <col width="20%">
                             </colgroup>
                             <tbody class="u-table-alt-palette-1-light-3 u-table-body">
-                                <tr style="height: 53px;">
-                                    <td class="u-table-cell">Caderno</td>
-                                    <td class="u-table-cell">24/03/2021</td>
-                                    <td class="u-table-cell">20213265485</td>
-                                    <td class="u-table-cell">24/05/2021</td>
-                                    <td class="u-table-cell">EEEM Agenor Roris</td>
-                                </tr>
-                                <tr style="height: 53px;">
-                                    <td class="u-table-cell">Caixa de lápis</td>
-                                    <td class="u-table-cell">22/02/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">22/04/2021</td>
-                                    <td class="u-table-cell">EEEM Maura Abaurre</td>
-                                </tr>
-                                <tr style="height: 53px;">
-                                    <td class="u-table-cell">Cola</td>
-                                    <td class="u-table-cell">23/04/2021</td>
-                                    <td class="u-table-cell">20216598745</td>
-                                    <td class="u-table-cell">Description</td>
-                                    <td class="u-table-cell">EEEM Agenor Roris</td>
-                                </tr>
+                                <?php include("_api/listaDoacao.php"); ?>
+                                
                             </tbody>
                         </table>
                     </div>
