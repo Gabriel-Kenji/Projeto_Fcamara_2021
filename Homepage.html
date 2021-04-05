@@ -17,17 +17,21 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <a href="#" class="logo">aFetivo</a>
+        <div id="toggle"></div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Como funciona</a></li>
-            <li><a href="#">Dicas</a></li>
-            <li><button class="signup" onclick="">Cadastre-se</button></li>
+            <li><a href="">Home</a></li>
+            <li><a href="#carousel_607d">Quem somos</a></li>
+            <li><a href="#carousel_79bd">Como funciona</a></li>
+            <li><a href="#carousel_f056">Dicas</a></li>
+            <li><button class="signup" onclick="openCadastro()">Cadastre-se</button></li>
             <li><button class="login" onclick="openLogin()">Entrar</button></li>
         </ul>
     </header>
+
+    
+
     <!-- AFETIVA  -->
     <section class="u-clearfix u-image u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-section-1 ajuste" id="sec-832e">
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
@@ -46,6 +50,7 @@
             </div>
         </div>
     </section>
+
     <!-- QUEM SOMOS NÓS  -->
     <section class="container-qs" id="carousel_607d">
         <div class="container-01">
@@ -122,6 +127,7 @@
             </div>
         </div>
     </section>
+    
     <!-- COMO FUNCIONA  -->
     <section class="u-clearfix u-custom-color-3 u-section-3" id="carousel_79bd">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -376,7 +382,7 @@
                                         </div>
                                         <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
                                     </div>
-                                    <input type="submit" name="" value="Cadastrar">
+                                    <input type="button" name="" id="tipoCadastro" onclick="pagCadastro()" value="Cadastrar">
                                 
                             </div>
                             <p class="link-sign-up">Já tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
