@@ -18,7 +18,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
         if($LoginDaoAluno->read($Aluno) == [])
         {
             $_SESSION['erro_login'] = 1;
-            header("Location: ../testlogin.html");
+            header("Location: ../homepage.html");
             echo "erro email"; 
         }
         else
@@ -33,7 +33,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                 $_SESSION['RaAluno'] = $id;
                 $_SESSION['logado'] = true;
                 $_SESSION['nomeuserlogado'] = $nomeuser;
-                header("Location: ../home_aluno.php");
+                header("Location: ../dashboard-aluno.php");
                 
                 
             }
@@ -41,7 +41,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
             {
                 echo "erro senha";
                 $_SESSION['erro_login'] = 2;
-                header("Location: ../testlogin.html");
+                header("Location: ../homepage.html");
             }
         }
     }
@@ -59,7 +59,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
             if($LoginDaoDoador->read($Doador) == [])
             {
                 $_SESSION['erro_login'] = 1;
-                //header("Location: ../testlogin.html");
+                header("Location: ../homepage.php");
                 echo "erro email doador"; 
             }
             else
@@ -75,7 +75,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                     $_SESSION['Doador'] = $id;
                     $_SESSION['logado'] = true;
                     $_SESSION['nomeuserlogado'] = $nomeuser;
-                    header("Location: ../home.php");
+                    header("Location: ../dashboard-doador.php");
                     
                     
                 }
@@ -83,7 +83,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                 {
                     echo "erro senha doador";
                     $_SESSION['erro_login'] = 2;
-                    //header("Location: ../testlogin.html");
+                    header("Location: ../homepage.php");
                 }
             }
 
@@ -103,7 +103,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                 if($LoginDaoEscola->read($Escola) == [])
                 {
                     $_SESSION['erro_login'] = 1;
-                    //header("Location: ../testlogin.html");
+                    header("Location: ../homepage.html");
                     echo "erro email Escola"; 
                 }
                 else
@@ -119,14 +119,14 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                         $_SESSION['InepEscola'] = $id;
                         $_SESSION['logado'] = true;
                         $_SESSION['nomeuserlogado'] = $nomeuser;    
-                        header("Location: ../home_escola.php");
+                        header("Location: ../dashboard-escola.php");
                         
                     }
                     else
                     {
                         echo "erro senha Escola";
                         $_SESSION['erro_login'] = 2;
-                        //header("Location: ../testlogin.html");
+                        header("Location: ../homepage.html");
                     }
                 }
             }

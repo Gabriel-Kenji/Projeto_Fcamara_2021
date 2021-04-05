@@ -16,7 +16,10 @@ class DaoCadastro_Aluno{
         $stmt->bindValue(7, $p->getBairro());
         $stmt->bindValue(8, $p->getInep()); 
         $stmt->execute();
+        
+        
     }
+
 
     public function create_com_telefone(Class_Aluno $p){
         $sql = 'INSERT INTO tb_aluno (cd_RA, nm_aluno, nm_email, nm_senha, sg_estado, nm_cidade, nm_bairro, ds_telefone, cd_INEP) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
@@ -31,9 +34,8 @@ class DaoCadastro_Aluno{
         $stmt->bindValue(6, $p->getCidade());
         $stmt->bindValue(7, $p->getBairro()); 
         $stmt->bindValue(8, $p->getTelefone());
-        $stmt->bindValue(9, $p->getInep()); 
-
-        $stmt->execute();
+        $stmt->bindValue(9, $p->getInep());
+        return $stmt->execute();
     }
 
     public function read(Class_Aluno $p){
