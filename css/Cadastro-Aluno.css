@@ -14,7 +14,7 @@
 
 .u-section-1 .u-image-1 {
   pointer-events: auto;
-  background-image: url("images/aluno.png");
+  background-image: url("../images/aluno.png");
   background-position: 50% 50%;
   min-height: 935px;
 }
