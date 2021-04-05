@@ -1,14 +1,3 @@
-<?php
-session_start(); 
-
-$id = $_SESSION['RaAluno'];
-if(!isset($_SESSION['RaAluno'])){
-    header("Location: /projeto_fcamara_2021/homepage.html");
-}
-include("_api/Select_Material.php");
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -39,13 +28,10 @@ include("_api/Select_Material.php");
                     <a><i class="fas fa-user-alt"></i></a> 
                 </div>
             </div>
-            <h1 class="u-heading-font u-text u-title u-text-1">Bem vin​do, [<?php echo $_SESSION['nomeuserlogado']; ?>] </h1>
-
-
 
             <h2>Seleciona os itens da sua doação:</h2>
             <div class="form">
-                <form action="" method="post">
+                <form action="_api/CadastroDoacao.php" method="post">
                     <table class="content-table">
                         <thead>
                             <tr>
@@ -55,32 +41,55 @@ include("_api/Select_Material.php");
                             </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        $contz = 0;
-                            foreach($MaterialDao->read() as $material):
-                                if(isset($array[$contz]) && !empty($array[$contz])){
-                                $name = "material".$array[$contz][0];?>
-                                <input type="hidden" id="<?php $Material['cd_material'] ?>">
-                                <tr>
-                                    
-                                    <td><?php echo $material['nm_material'];?></td>
-                                    <td>
-                                        <div class="buttons">
-                                            <button onclick="subtraiQnt('<?php echo $name ?>')">-</button>
-                                            <input type="text" id="<?php echo "$name" ?>" value="0" >
-                                            <button onclick="somaQnt('<?php echo $name ?>')">+</button>         
-                                        </div>
-                                    </td>
-                                </tr>  
-                                    <?php
-                                $contz++;
-                                }
-                                endforeach;
-
-                                ?>    
-                            <tr>
+                            <?php include("_api/ListaMateriaisAluno.php");?>
+                            <!-- <tr>
+                                <td>borracha</td>
+                               
+                                <td>
+                                    <div class="buttons">
+                                        <button onclick="subtraiQnt('qnt-borracha')">-</button>
+                                        <input type="text" id="qnt-borracha" value="0">
+                                        <button onclick="somaQnt('qnt-borracha')">+</button>
+                                    </div>
+                                </td>
                                 
+                            </tr>
+                            <tr>
+                                <td>caneta</td>
+                                
+                                <td>
+                                    <div class="buttons">
+                                        <button onclick="subtraiQnt('qnt-caneta')">-</button>
+                                        <input type="text" id="qnt-caneta" value="0">
+                                        <button onclick="somaQnt('qnt-caneta')">+</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>caderno</td>
+                             
+                                <td>
+                                    <div class="buttons">
+                                        <button onclick="subtraiQnt('qnt-caderno')">-</button>
+                                        <input type="text" id="qnt-caderno" value="0">
+                                        <button onclick="somaQnt('qnt-caderno')">+</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>lapis</td>
+                                
+                                <td>
+                                    <div class="buttons">
+                                        <button onclick="subtraiQnt('qnt-lapis')">-</button>
+                                        <input type="text" id="qnt-lapis" value="0">
+                                        <button onclick="somaQnt('qnt-lapis')">+</button>
+                                    </div>
+                                </td>
+                            </tr> -->
+                        </tbody>
                     </table>
+                    <p>Local da entrega:</p>
                     <input type="submit" value="solicitar doação"> 
                 </form>
             </div>

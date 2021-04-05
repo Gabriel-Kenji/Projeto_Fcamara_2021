@@ -37,7 +37,10 @@
             $DaoDoacao->createDoacaoMaterial($userDoacao);
             header("Location: ../dashboard-doador.php");
         }
-                
+        else
+        {
+            echo "erro";
+        }        
     }   
 
 

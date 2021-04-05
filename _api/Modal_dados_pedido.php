@@ -55,7 +55,7 @@ if(isset($_SESSION['id_pedido']) && !empty($_SESSION['id_pedido'])){
         </table>
 
 
-        <a href="http://localhost/projeto_fcamara_2021/selecao-doacao.php">confirmar doação</a>
+        <a href="./selecao-doacao.php">confirmar doação</a>
     </div>
 <?php                     
 }

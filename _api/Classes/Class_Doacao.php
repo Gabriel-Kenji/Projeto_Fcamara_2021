@@ -1,7 +1,7 @@
 <?php
 namespace _api\Classes;
 class Class_Doacao{
-    private $doacao, $CPF, $status, $pedido;
+    private $doacao, $CPF, $status, $pedidomaterial, $quantidade;
 
     public function getDoacao(){
         return $this->doacao;
@@ -27,12 +27,20 @@ class Class_Doacao{
         $this->status = $status;
     }
 
-    public function getPedido(){
-        return $this->pedido;
+    public function getPedidoMaterial(){
+        return $this->pedidomaterial;
     }
 
-    public function setPedido($pedido){
-        $this->pedido = $pedido;
+    public function setPedidoMaterial($pedidomaterial){
+        $this->pedidomaterial = $pedidomaterial;
+    }
+
+    public function getQuantidade(){
+        return $this->quantidade;
+    }
+
+    public function setQuantidade($quantidade){
+        $this->quantidade = $quantidade;
     }
 }
 
