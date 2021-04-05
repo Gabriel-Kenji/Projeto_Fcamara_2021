@@ -22893,7 +22893,8 @@ h6 {
 }
 
 .u-custom-font.u-heading-font {
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
+    ;
 }
 
 
@@ -38132,7 +38133,6 @@ blockquote {
 }
 
 .u-footer .u-text-1 {
-    width: 417px;
     margin: 49px auto;
 }
 
