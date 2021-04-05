@@ -22,9 +22,9 @@ include("_api/Select_Material.php");
 <!-- <body onload="listarItens()"> -->
 <body>
     <header>
-        <a href="homepage.html" class="logo">aFetivo</a>
+        <a href="#" class="logo">aFetivo</a>
         <ul>
-            <li><button  class="login"><a href="_api/function/logout.php" class="login">Sair</a></button></li>
+            <li><button class="login">Sair</button></li>
         </ul>
     </header>
 
@@ -32,17 +32,20 @@ include("_api/Select_Material.php");
         <div class="content">
             <div class="row-topo">
                 <div>
-                    <a href="dashboard-aluno.php"><i class="fas fa-arrow-left"></i></a>
+                    <a><i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div>
+                    <i class="fas fa-cog"></i>
+                    <a><i class="fas fa-user-alt"></i></a> 
                 </div>
             </div>
-
             <h1 class="u-heading-font u-text u-title u-text-1">Bem vin​do, [<?php echo $_SESSION['nomeuserlogado']; ?>] </h1>
 
 
 
             <h2>Seleciona os itens da sua doação:</h2>
             <div class="form">
-                <form action="_api/Cadastro_Pedido.php" method="post">
+                <form action="" method="post">
                     <table class="content-table">
                         <thead>
                             <tr>
@@ -56,9 +59,7 @@ include("_api/Select_Material.php");
                         $contz = 0;
                             foreach($MaterialDao->read() as $material):
                                 if(isset($array[$contz]) && !empty($array[$contz])){
-                                $name = "material".$array[$contz][0];
-                                
-                                ?>
+                                $name = "material".$array[$contz][0];?>
                                 <input type="hidden" id="<?php $Material['cd_material'] ?>">
                                 <tr>
                                     
@@ -66,9 +67,8 @@ include("_api/Select_Material.php");
                                     <td>
                                         <div class="buttons">
                                             <button onclick="subtraiQnt('<?php echo $name ?>')">-</button>
-                                            <input type="range" min="0" max="10" id="<?php echo $name ?>" value="0" >
-                                            <button onclick="somaQnt('<?php echo $name ?>')">+</button> 
-                                                    
+                                            <input type="text" id="<?php echo "$name" ?>" value="0" >
+                                            <button onclick="somaQnt('<?php echo $name ?>')">+</button>         
                                         </div>
                                     </td>
                                 </tr>  
@@ -79,7 +79,7 @@ include("_api/Select_Material.php");
 
                                 ?>    
                             <tr>
-                        <input type="hidden" type="text" name="ra" value="<?php echo $id ?>">        
+                                
                     </table>
                     <input type="submit" value="solicitar doação"> 
                 </form>

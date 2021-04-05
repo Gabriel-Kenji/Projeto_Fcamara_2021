@@ -35,7 +35,7 @@ class DaoCadastro_Aluno{
         $stmt->bindValue(7, $p->getBairro()); 
         $stmt->bindValue(8, $p->getTelefone());
         $stmt->bindValue(9, $p->getInep());
-        return $stmt->execute();
+
     }
 
     public function read(Class_Aluno $p){

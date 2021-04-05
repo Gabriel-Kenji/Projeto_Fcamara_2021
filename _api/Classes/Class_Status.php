@@ -1,14 +1,14 @@
 <?php
 namespace _api\Classes;
-class Class_Pedido{
-    private $id_status, $nome;
+class Class_Status{
+    private $status, $nome;
 
-    public function getIdStatus(){
-        return $this->id_status;
+    public function getStatus(){
+        return $this->status;
     }
 
-    public function setIdStatus($id_status){
-        $this->id_status = $id_status;
+    public function setStatus($status){
+        $this->status = $status;
     }
 
     public function getNome(){
