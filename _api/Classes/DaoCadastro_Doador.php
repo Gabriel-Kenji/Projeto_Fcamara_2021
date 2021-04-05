@@ -4,13 +4,13 @@ namespace _api\Classes;
 class DaoCadastro_Doador{
 
     public function create_sem_telefone(Class_Doador $p){
-        $sql = 'INSERT INTO tb_doador (cd_CPF, nm_doador, nm_senha, nm_email, sg_estado, nm_cidade, nm_bairro) VALUES (?, ?, ?, ?, ?, ?, ?)';
+        $sql = 'INSERT INTO tb_doador (cd_CPF, nm_doador, nm_email, nm_senha, sg_estado, nm_cidade, nm_bairro) VALUES (?, ?, ?, ?, ?, ?, ?)';
 
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getCPF());
         $stmt->bindValue(2, $p->getNome());
-        $stmt->bindValue(3, $p->getSenha());
         $stmt->bindValue(4, $p->getEmail());
+        $stmt->bindValue(3, $p->getSenha());
         $stmt->bindValue(5, $p->getEstado());
         $stmt->bindValue(6, $p->getCidade());
         $stmt->bindValue(7, $p->getBairro());
@@ -18,13 +18,13 @@ class DaoCadastro_Doador{
     }
 
     public function create_com_telefone(Class_Doador $p){
-        $sql = 'INSERT INTO tb_doador (cd_CPF, nm_doador, nm_senha, nm_email, sg_estado, nm_cidade, nm_bairro, ds_telefone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
+        $sql = 'INSERT INTO tb_doador (cd_CPF, nm_doador, nm_email, nm_senha,  sg_estado, nm_cidade, nm_bairro, ds_telefone) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
 
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getCPF());
         $stmt->bindValue(2, $p->getNome());
-        $stmt->bindValue(3, $p->getSenha());
         $stmt->bindValue(4, $p->getEmail());
+        $stmt->bindValue(3, $p->getSenha());
         $stmt->bindValue(5, $p->getEstado());
         $stmt->bindValue(6, $p->getCidade());
         $stmt->bindValue(7, $p->getBairro());

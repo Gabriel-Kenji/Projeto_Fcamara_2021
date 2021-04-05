@@ -1,12 +1,15 @@
+<?php
+include("_api/Select_Escolas.php")
+?>
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="pt-BR">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>aFetivo - Cadastro da Escola</title>
+    <title>aFetivo - Cadastro de Aluno</title>
     <link rel="stylesheet" href="css/nicepage.css" media="screen">
-    <link rel="stylesheet" href="css/cadastro-escola.css" media="screen">
+    <link rel="stylesheet" href="css/Cadastro-Aluno.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
     <!-- <script class="u-script" type="text/javascript" src="js/nicepage.js" defer=""></script> -->
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
@@ -109,11 +112,11 @@
                             <div class="u-container-layout u-container-layout-3">
                                 <h1 class="u-heading-font u-text u-title u-text-1">
                                     <span style="font-style: normal;">Faça seu cadastro,</span>
-                                    <span style="font-weight: 700; font-style: normal;">Escola</span>
+                                    <span style="font-weight: 700; font-style: normal;">aluno!</span>
                                 </h1>
                                 <div class="u-form u-form-1">
                                 
-                                    <form action="_api/Cadastro_Escola.php" method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical " style="padding: 10px" source="email" name="form-1">
+                                    <form action="_api/Cadastro_Aluno.php" method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical " style="padding: 10px" source="email" name="form-1">
                                         <input type="hidden" id="siteId" name="siteId" value="303755">
                                         <input type="hidden" id="pageId" name="pageId" value="309510">
                                         <div class="u-form-group u-form-name u-form-partition-factor-2">
@@ -121,8 +124,8 @@
                                             <input type="text" placeholder="Digite seu nome" id="name-4a6d" name="nome" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-3 u-input u-input-rectangle u-white u-input-1" required>
                                         </div>
                                         <div class="u-form-group u-form-partition-factor-2 u-form-group-2">
-                                            <label for="text-b76d" class="u-label u-label-2">INEP</label>
-                                            <input type="text" placeholder="Digite seu INEP" id="text-b76a" name="numeroINEP" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-3 u-input u-input-rectangle u-white u-input-2" required maxlength="12">
+                                            <label for="text-b76d" class="u-label u-label-2">Registro de aluno</label>
+                                            <input type="text" placeholder="Digite seu RA" id="text-b76d" name="numeroRA" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-3 u-input u-input-rectangle u-white u-input-2" required maxlength="12">
                                         </div>
                                         <div class="u-form-email u-form-group">
                                             <label for="email-4a6d" class="u-label u-label-3">E-mail</label>
@@ -157,6 +160,29 @@
                                             <input type="text" placeholder="Digite seu bairro" id="bairro" name="bairro" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-3 u-input u-input-rectangle u-white u-input-1" required>
                                         </div>
 
+                                        <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-9">
+                                            <label for="select-2fdc" class="u-label u-label-9">Selecione sua escola</label>
+                                            <div class="u-form-select-wrapper">
+                                                <select id="select-2fdc" name="select-escola" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-3 u-input u-input-rectangle u-white u-input-9" required>
+                                                    <option value="Selecione">Selecione</option>
+                                                    <?php
+                                                        $contz = 0;
+                                                        for($i=0 ; $i<=1; $i++ ){
+                                                            if(isset($array[$contz]) && !empty($array[$contz])){
+                                                                echo $array[$contz][0]. $array[$contz][1] ;
+                                                                ?>
+                                                                <option value="<?php echo $array[$contz][0] ?>" ><?php echo $array[$contz][1] ?></option><?php
+                                                                $contz++;
+                                                                $i = 0;
+                                                            }
+                                                        }
+                                                    ?>
+                                                </select>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret">
+                                                <path fill="currentColor" d="M4 8L0 4h8z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
                                         <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-10">
                                             <label for="phone-5a25" class="u-label u-label-10">Contatos:</label>
                                             <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="(DDD) XXXXX-XXXX" id="phone-5a25" name="telefone" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-palette-1-dark-3 u-input u-input-rectangle u-white u-input-10"
