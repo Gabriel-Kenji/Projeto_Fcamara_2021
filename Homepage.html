@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/Homepage.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i|Oswald:200,300,400,500,600,700">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +21,7 @@
             <li><a href="#">Quem somos</a></li>
             <li><a href="#">Como funciona</a></li>
             <li><a href="#">Dicas</a></li>
-            <li><button class="signup" onclick="openCadastro()">Cadastre-se</button></li>
+            <li><button class="signup" onclick="">Cadastre-se</button></li>
             <li><button class="login" onclick="openLogin()">Entrar</button></li>
         </ul>
     </header>
@@ -45,74 +44,78 @@
         </div>
     </section>
     <!-- QUEM SOMOS NÓS  -->
-    <section class="u-clearfix u-section-2" id="carousel_607d">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-                <div class="u-layout">
-                    <div class="u-layout-row">
-                        <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
-                            <div class="u-container-layout u-container-layout-1">
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-1"></div>
-                                <div alt="" class="u-image u-image-circle u-image-1" data-image-width="640" data-image-height="640">
-                                </div>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-2"></div>
-                                <div alt="" class="u-image u-image-circle u-image-2" data-image-width="960" data-image-height="1280">
-                                </div>
-                                <h6 class="u-text u-text-1">Gabriel Kenji</h6>
-                                <small>dev. back-end</small>
-                                <h6 class="u-text u-text-2">Maressa Gonzales</h6>
-                                <small>UX</small>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-3"></div>
-                                <div alt="" class="u-image u-image-circle u-image-3" data-image-width="256" data-image-height="256">
-                                </div>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-4"></div>
-                                <div alt="" class="u-image u-image-circle u-image-4" data-image-width="1280" data-image-height="968">
-                                </div>
-                                <h6 class="u-text u-text-3">Rodrigo Lopes</h6>
-                                <small>dev. back-end</small>
-                                <h6 class="u-text u-text-4">Marina Machado</h6>
-                                <small>UX</small>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-3"></div>
-                                <div alt="" class="u-image u-image-circle u-image-5" data-image-width="256" data-image-height="256">
-                                </div>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-4"></div>
-                                <div alt="" class="u-image u-image-circle u-image-6" data-image-width="960" data-image-height="968">
-                                </div>
-                                <h6 class="u-text u-text-3">Pedro H. Reis</h6>
-                                <small>dev. front-end</small>
-                                <div>
-                                    <h6 class="u-text u-text-6">Jonathan Ferreira</h6>
-                                    <small>dev. front-end</small>
-                                </div>
+    <section class="container-qs" id="carousel_607d">
+        <div class="container-01">
+            <section class="container column">
 
-                                <div class="u-shape u-shape-svg u-text-custom-color-3 u-shape-7" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0">
-                                    <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 50" style="">
-                    <use xlink:href="#svg-7f47"></use>
-                  </svg>
-                                    <svg class="u-svg-content" viewBox="0 0 160 50" x="0px" y="0px" id="svg-7f47" style="enable-background:new 0 0 160 50;">
-                    <path d="M133,26.7c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,22
-	c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0
-	l-3.8,4.7C146.9,20.2,142.3,20.2,133,26.7z M133,10.8c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0
-	c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,6.1c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0C75.1-2,85.9-1.6,97,6.1
-	c11.4,8,20.3,8.3,32.2,0C140.8-2,148.4-2,160,6.1l-3.8,4.7C146.9,4.3,142.3,4.3,133,10.8z M32.2,38c11,7.6,19,8.5,31.3,0
-	c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0l-3.8,4.7c-9.3-6.5-13.9-6.5-23.3,0
-	c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,38
-	C11.2,30.2,20.6,29.9,32.2,38z"></path>
-                  </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
-                            <div class="u-container-layout u-container-layout-2">
-                                <h1 class="u-text u-text-7">Quem somos&nbsp;<span style="font-weight: 700;">nós?</span>
-                                </h1>
-                                <p class="u-text u-text-grey-50 u-text-8">Somos uma plataforma para organizar e facilitar a doação de materiais escolares.<br>
-                                    <br>Com a ideia desenvolvida pela FCamara, nós do squad #29 criamos a aFetivo para que alunos possam ter materiais escolares, mesmo sem ter condições de comprá-los
-                                </p>
-                            </div>
-                        </div>
+                <div class="item">
+                <section class="container row">
+                  <div class="item">
+                    <div>
+                        <img src="./images/hp/maressa.png">
+                        <h5 class="">Maressa Gonzales</h5>
+                        <p>UX</p>
                     </div>
-                </div>
+                  </div>
+                  <div class="item">
+                    <div>
+                        <img src="./images/hp/marina.png">
+                        <h5 class="">Marina Machado</h5>
+                        <p>UX</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            
+                <div class="item">
+                <section class="container row">
+                  <div class="item">
+                    <div>
+                        <img src="./images/hp/kenji.png">
+                        <h5 class="">Gabriel Kenji</h5>
+                        <p>dev. back-end</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="">
+                        <img src="./images/hp/jonathan 2.png">
+                        <h5 class="">Jonathan Ferreira</h5>
+                        <p>dev. front-end</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            
+                <div class="item">
+                <section class="container row">
+                  <div class="item">
+                    <div class="">
+                        <img src="./images/hp/pedro.png">
+                        <h5 class="">Pedro H. Reis</h5>
+                        <p>dev. front-end</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="">
+                        <img src="./images/hp/rodrigo.png">
+                        <h5 class="">Rodrigo Lopes</h5>
+                        <p>dev. back-end</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            
+            </section>
+
+        </div>
+
+        <div class="container-02">
+            <div class="text-content">
+                <h1 class="">Quem somos&nbsp;<span style="font-weight: 700;">nós?</span>
+                </h1>
+                <p>Somos uma plataforma para organizar e facilitar a doação de materiais escolares.</p>
+                <p>Com a ideia desenvolvida pela FCamara, nós do squad #29 criamos a aFetivo para que alunos possam ter materiais escolares, mesmo sem ter condições de comprá-los
+                </p>
             </div>
         </div>
     </section>
