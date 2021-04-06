@@ -59,7 +59,9 @@ if(!isset($_SESSION['InepEscola'])){
                         <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Index.html#carousel_119d"
                                 data-page-id="303762" style="padding: 12px 20px;">Contate-nos</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 12px 20px;">Sair</a>
+                        <li class="u-nav-item">                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="_api/function/logout.php" style="padding: 12px 20px;">Sair</a>
+
+
                         </li>
                     </ul>
                 </div>

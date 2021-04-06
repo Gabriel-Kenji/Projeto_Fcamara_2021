@@ -49,7 +49,9 @@
                         <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Index.html#carousel_119d"
                                 data-page-id="303762" style="padding: 12px 20px;">Contate-nos</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 12px 20px;">Sair</a>
+                        <li class="u-nav-item">                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="_api/function/logout.php" style="padding: 12px 20px;">Sair</a>
+
+
                         </li>
                     </ul>
                 </div>
@@ -81,10 +83,7 @@
                     <?php include("_api/doador.php"); ?>
                     <a href="realizar-doacao.php" class="u-active-palette-1-dark-2 u-btn u-btn-round u-button-style u-custom-color-4 u-hover-palette-1-light-2 u-radius-30 u-text-body-color u-btn-1">deseja
             realizar uma doação?</a>
-                    <a href="#" class="u-active-palette-1-dark-2 u-btn u-btn-round u-button-style u-custom-color-4 u-hover-palette-1-light-2 u-radius-30 u-text-body-color u-btn-2" style="
-                    top: 6px;
-                ">doações
-            em andamento</a>
+ 
                     <h4 class="u-text u-text-2">Histórico de doaç​ões feitas </h4>
                     <div class="u-table u-table-responsive u-table-1">
                         <table class="u-table-entity">

@@ -47,7 +47,7 @@ if(isset($_POST['numeroRA']) && !empty($_POST['numeroRA']) && isset($_POST['emai
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../testcadastro.html");
+                header("Location: ../index.html");
             }
         }
         else
@@ -62,7 +62,7 @@ if(isset($_POST['numeroRA']) && !empty($_POST['numeroRA']) && isset($_POST['emai
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../testcadastro.html");
+                header("Location: ../index.html");
             }
         }
         
@@ -72,14 +72,14 @@ if(isset($_POST['numeroRA']) && !empty($_POST['numeroRA']) && isset($_POST['emai
         //ERRO SENHAS DIFERENTES
         echo "senha";
         $_SESSION['erro_cad'] = 2;
-        header("Location: ../cadastro_aluno.html");
+        header("Location: ../index.html");
     }
 }
 else
 {
     echo "vazio";
     $_SESSION['erro_cad'] = 1;
-    //header("Location: ../login_aluno.html");
+    header("Location: ../index.html");
 }
 
 

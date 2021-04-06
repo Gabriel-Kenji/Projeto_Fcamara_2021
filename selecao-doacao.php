@@ -11,9 +11,9 @@
 <!-- <body onload="listarItens()"> -->
 <body>
     <header>
-        <a href="#" class="logo">aFetivo</a>
+        <a href="Index.html" class="logo">aFetivo</a>
         <ul>
-            <li><button class="login">Sair</button></li>
+        <li><button  class="login"><a href="_api/function/logout.php" class="login">Sair</a></button></li>
         </ul>
     </header>
 
@@ -21,7 +21,7 @@
         <div class="content">
             <div class="row-topo">
                 <div>
-                    <a><i class="fas fa-arrow-left"></i></a>
+                    <a href="dashboard-doador.php" ><i class="fas fa-arrow-left"></i></a>
                 </div>
                 <div>
                     <i class="fas fa-cog"></i>

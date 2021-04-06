@@ -47,7 +47,7 @@ if(isset($_POST['numeroCPF']) && !empty($_POST['numeroCPF']) && isset($_POST['em
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../testcadastro.html");
+                header("Location: ../index.html");
             }
         }
         else
@@ -62,7 +62,7 @@ if(isset($_POST['numeroCPF']) && !empty($_POST['numeroCPF']) && isset($_POST['em
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../testcadastro1.html");
+                header("Location: ../index.html");
             }
         }
         
@@ -72,14 +72,14 @@ if(isset($_POST['numeroCPF']) && !empty($_POST['numeroCPF']) && isset($_POST['em
         //ERRO SENHAS DIFERENTES
         echo "senha";
         $_SESSION['erro_cad'] = 2;
-        header("Location: ../cadastro_doador3.html");
+        header("Location: ../index.html");
     }
 }
 else
 {
     echo "vazio";
     $_SESSION['erro_cad'] = 1;
-/*     header("Location: ../testcadastro.html"); */
+     header("Location: ../index.html");
 }
 
 

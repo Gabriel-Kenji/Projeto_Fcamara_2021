@@ -45,7 +45,7 @@ if(isset($_POST['numeroINEP']) && !empty($_POST['numeroINEP']) && isset($_POST['
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../testcadastro.html");
+                header("Location: ../index.html");
             }
         }
         else
@@ -60,7 +60,7 @@ if(isset($_POST['numeroINEP']) && !empty($_POST['numeroINEP']) && isset($_POST['
                 //ERRO EMAIL JA EXISTENTE
                 echo "email";
                 $_SESSION['erro_cad'] = 3;
-                header("Location: ../testcadastro.html");
+                header("Location: ../index.html");
             }
         }
         
@@ -70,14 +70,14 @@ if(isset($_POST['numeroINEP']) && !empty($_POST['numeroINEP']) && isset($_POST['
         //ERRO SENHAS DIFERENTES
         echo "senha";
         $_SESSION['erro_cad'] = 2;
-        header("Location: ../erro.html");
+        header("Location: ../index.html");
     }
 }
 else
 {
     echo "vazio";
     $_SESSION['erro_cad'] = 1;
-    //header("Location: ../erro.html");
+    header("Location: ../index.html");
 }
 
 

@@ -17,9 +17,9 @@ include("_api/Select_Escolas_Doar.php");
 
 <body>
     <header>
-        <a href="#" class="logo">aFetivo</a>
+    <a href="Index.html" class="logo">aFetivo</a>
         <ul>            
-            <li><button class="login">Sair</button></li>
+        <li><button  class="login"><a href="_api/function/logout.php" class="login">Sair</a></button></li>
         </ul>
     </header>
 
@@ -27,12 +27,9 @@ include("_api/Select_Escolas_Doar.php");
         <div class="content">
             <div class="row-topo">
                 <div>
-                    <a><i class="fas fa-arrow-left"></i></a>
+                    <a href="dashboard-doador.php" ><i class="fas fa-arrow-left"></i></a>
                 </div>
-                <div>
-                    <i class="fas fa-cog"></i>
-                    <a><i class="fas fa-user-alt"></i></a> 
-                </div>
+
             </div>
             <h2>Selecione o local de doação:</h2>
             <div class="select-location">
