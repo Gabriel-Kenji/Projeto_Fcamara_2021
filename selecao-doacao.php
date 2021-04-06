@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<header id="header">
-        <nav>
-            <a class="logo">aFetivo</a>
-            <div class="mobile-menu" id="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-list" id="nav-list">
-                <li>
-                    <a href="_api/function/logout.php">
-                        <button class="login" onclick="openLogin()">Sair</button>
-                    </a>
-                </li>
-            </ul>
-        </nav>
- </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Doação</title>
+    <link rel="stylesheet" href="./css/selecao-materiais.css">
+    <link rel="stylesheet" href="./css/mobile-navbar.css">
+</head>
 
 <!-- <body onload="listarItens()"> -->
 <body>
-    <header>
-        <a href="Index.html" class="logo">aFetivo</a>
-        <ul>
-        <li><button  class="login"><a href="_api/function/logout.php" class="login">Sair</a></button></li>
-        </ul>
-    </header>
+        <header id="header">
+                <nav>
+                    <a class="logo">aFetivo</a>
+                    <div class="mobile-menu" id="mobile-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <ul class="nav-list" id="nav-list">
+                        <li>
+                            <a href="_api/function/logout.php">
+                                <button class="login" onclick="openLogin()">Sair</button>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
 
     <div class="container">
         <div class="content">
