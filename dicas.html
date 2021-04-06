@@ -11,21 +11,24 @@
     <link rel="stylesheet" href="./css/dicas.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Sans:400,400i,700,700i|Oswald:200,300,400,500,600,700">
+    <link rel="stylesheet" href="./css/mobile-navbar.css">
 </head>
 
 <body>
-    <header id="header">
-        <a href="#" class="logo">aFetivo</a>
-        <div id="toggle"></div>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="#carousel_607d">Quem somos</a></li>
-            <li><a href="#carousel_79bd">Como funciona</a></li>
-            <li><a href="#carousel_f056">Dicas</a></li>
-            <li><button class="signup" onclick="openCadastro()">Cadastre-se</button></li>
-            <li><button class="login" onclick="openLogin()">Entrar</button></li>
-        </ul>
-    </header>
+<header id="header">
+        <nav>
+            <a class="logo">aFetivo</a>
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="Index.html">Home</a></li>
+
+            </ul>
+        </nav>
+ </header>
 
     <div class="container">
         <div class="content">
@@ -70,5 +73,6 @@
 </body>
 <script type="text/javascript" src="./js/scriptRD.js"></script>
 <script src="https://kit.fontawesome.com/57dc5e43be.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/mobile-navbar.js"></script>
 
 </html>

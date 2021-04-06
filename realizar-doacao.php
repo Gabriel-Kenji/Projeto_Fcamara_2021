@@ -13,15 +13,27 @@ include("_api/Select_Escolas_Doar.php");
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
     <script src=”http://code.jquery.com/jquery-1.11.2.min.js”> </script> 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+    <link rel="stylesheet" href="./css/mobile-navbar.css">
 </head>
 
 <body>
-    <header>
-    <a href="Index.html" class="logo">aFetivo</a>
-        <ul>            
-        <li><button  class="login"><a href="_api/function/logout.php" class="login">Sair</a></button></li>
-        </ul>
-    </header>
+<header id="header">
+        <nav>
+            <a class="logo">aFetivo</a>
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li>
+                    <a href="_api/function/logout.php">
+                        <button class="login" onclick="openLogin()">Sair</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+ </header>
 
     <div class="container">
         <div class="content">
@@ -154,7 +166,8 @@ include("_api/Select_Escolas_Doar.php");
         </div>
     </div>
 
-    
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/mobile-navbar.js"></script>
 </body>
 <script type="text/javascript" src="./js/scriptRD.js"></script>
 <script src="https://kit.fontawesome.com/57dc5e43be.js" crossorigin="anonymous"></script>

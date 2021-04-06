@@ -17,6 +17,7 @@ include("_api/Select_Material.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Doação</title>
     <link rel="stylesheet" href="./css/selecao-materiais.css">
+    <link rel="stylesheet" href="./css/mobile-navbar.css">
 </head>
 
 <!-- <body onload="listarItens()"> -->
@@ -81,7 +82,7 @@ include("_api/Select_Material.php");
             </div>
         </div>
     </div>
-    
+    <script type="text/javascript" src="js/mobile-navbar.js"></script>
 </body>
 <script type="text/javascript" src="./js/script.js"></script>
 <script src="https://kit.fontawesome.com/57dc5e43be.js" crossorigin="anonymous"></script>

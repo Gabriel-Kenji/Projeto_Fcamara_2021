@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Doação</title>
-    <link rel="stylesheet" href="./css/selecao-materiais.css">
-</head>
+<header id="header">
+        <nav>
+            <a class="logo">aFetivo</a>
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li>
+                    <a href="_api/function/logout.php">
+                        <button class="login" onclick="openLogin()">Sair</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+ </header>
 
 <!-- <body onload="listarItens()"> -->
 <body>
@@ -95,7 +105,7 @@
             </div>
         </div>
     </div>
-    
+    <script type="text/javascript" src="js/mobile-navbar.js"></script>
 </body>
 <script type="text/javascript" src="./js/script.js"></script>
 <script src="https://kit.fontawesome.com/57dc5e43be.js" crossorigin="anonymous"></script>

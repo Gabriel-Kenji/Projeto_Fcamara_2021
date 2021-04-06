@@ -132,6 +132,10 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
             }
         }
     }
+}else{
+    header("Location: ../index.html");
 }
+
+
         
 ?>
