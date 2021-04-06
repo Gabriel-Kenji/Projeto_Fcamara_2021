@@ -2,43 +2,46 @@
 require __DIR__ . "/../vendor/autoload.php";
 session_start();
 
-$userPedido = new \_api\Classes\Class_Pedido();
-$DaoPedido = new \_api\Classes\DaoPedido();
-$PedidoDao = new \_api\Classes\DaoPedido();
+$user = new \_api\Classes\Class_Pedido();
+
+$user->setRa($_SESSION['RaAluno']);
+
 $MaterialDao = new \_api\Classes\DaoMaterial();
-$PedidoMaterial = new \_api\Classes\Class_Pedido_Material(); 
+$PedidoDao = new \_api\Classes\DaoPedido();
 
-$ra = $_SESSION['RaAluno'];
-$userPedido->setRa($ra);
-$DaoPedido->createPedido($userPedido);
-$cont = 1;
-$DaoPedido->readPedido($userPedido);
-foreach($DaoPedido->readPedido($userPedido) as $pedidu){
-    if($DaoPedido->readPedidoCont($userPedido) == $cont)
-    {
-        $codigo_pedido = $pedidu["cd_pedido"];
-        $userPedido->setPedido($codigo_pedido);
-        echo $codigo_pedido;
-    }
+$MaterialDao->read();
+    $cont = 0;
+foreach($MaterialDao->read() as $material):
     $cont++;
-}
+    $post = 'material'. $cont;
+    echo $post."</br>";
+    $user->setMaterial($cont);
 
-$userPedido->setPedido($codigo_pedido);
-$contz = 1;
-foreach($MaterialDao->read() as $material){
-    $item = 'material'.$contz;
-    if(isset($_POST[$item]) && !empty($_POST[$item])){
-        $quantidade = $_POST[$item];
-        $PedidoMaterial->setMaterial($contz);
-        $PedidoMaterial->setPedido($codigo_pedido);
-        $PedidoMaterial->setQuantidade($quantidade);
-        $PedidoDao->createPedidoMaterial($PedidoMaterial);
+    if($PedidoDao->read($user) == FALSE)
+    {
+        if(isset($_POST[$post]) && !empty($_POST[$post]))
+        {
+            
+            
+            $PedidoDao->create($user);
 
-
+            if($PedidoDao->read($user) == TRUE)
+            {
+                header("Location: ../pedidos.php");
+            }
+            else
+            {
+                echo "Não Foi</br>";
+            }   
+        }
     }
-    $contz++;
-    header("Location: ../dashboard-aluno.php");
-}
+    else
+    {
+        echo "Ja cadastrado</br>";
+        header("Location: ../pedidos.php");
+    }
+    
 
+endforeach;
 
 ?>

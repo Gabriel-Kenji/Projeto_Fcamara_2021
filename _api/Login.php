@@ -33,7 +33,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                 $_SESSION['RaAluno'] = $id;
                 $_SESSION['logado'] = true;
                 $_SESSION['nomeuserlogado'] = $nomeuser;
-                header("Location: ../dashboard-aluno.php");
+                header("Location: ../home_aluno.php");
                 
                 
             }
@@ -75,7 +75,7 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                     $_SESSION['Doador'] = $id;
                     $_SESSION['logado'] = true;
                     $_SESSION['nomeuserlogado'] = $nomeuser;
-                    header("Location: ../dashboard-doador.php");
+                    header("Location: ../home.php");
                     
                     
                 }
@@ -118,8 +118,8 @@ if(isset($_POST['usuarios']) && !empty($_POST['usuarios']) && isset($_POST['senh
                     {
                         $_SESSION['InepEscola'] = $id;
                         $_SESSION['logado'] = true;
-                         $_SESSION['nomeuserlogado'] = $nomeuser;    
-                        header("Location: ../dashboard-escola.php");
+                        $_SESSION['nomeuserlogado'] = $nomeuser;    
+                        header("Location: ../home_escola.php");
                         
                     }
                     else

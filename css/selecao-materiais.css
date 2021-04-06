@@ -148,10 +148,10 @@ header ul li:hover .signup{
   justify-content: space-between;
   margin-bottom: 30px;
   color: #292E33;
-  cursor: pointer;
 }
 
 .content .row-topo a{
+  cursor: pointer;
   margin-left: 10px;
 }
 

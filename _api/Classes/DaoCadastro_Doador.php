@@ -9,8 +9,8 @@ class DaoCadastro_Doador{
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getCPF());
         $stmt->bindValue(2, $p->getNome());
-        $stmt->bindValue(3, $p->getEmail());
-        $stmt->bindValue(4, $p->getSenha());
+        $stmt->bindValue(4, $p->getEmail());
+        $stmt->bindValue(3, $p->getSenha());
         $stmt->bindValue(5, $p->getEstado());
         $stmt->bindValue(6, $p->getCidade());
         $stmt->bindValue(7, $p->getBairro());
@@ -23,8 +23,8 @@ class DaoCadastro_Doador{
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getCPF());
         $stmt->bindValue(2, $p->getNome());
-        $stmt->bindValue(3, $p->getEmail());
-        $stmt->bindValue(4, $p->getSenha());
+        $stmt->bindValue(4, $p->getEmail());
+        $stmt->bindValue(3, $p->getSenha());
         $stmt->bindValue(5, $p->getEstado());
         $stmt->bindValue(6, $p->getCidade());
         $stmt->bindValue(7, $p->getBairro());
@@ -34,11 +34,10 @@ class DaoCadastro_Doador{
 
     public function read(Class_Doador $p){
 
-        $sql = 'SELECT * From tb_doador WHERE nm_email = ? or cd_CPF = ?';
+        $sql = 'SELECT * From tb_doador WHERE nm_email = ?';
 
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $p->getEmail());
-        $stmt->bindValue(2, $p->getCPF());
         $stmt->execute();
 
         if($stmt->rowCount() > 0):

@@ -17,17 +17,21 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <a href="#" class="logo">aFetivo</a>
+        <div id="toggle"></div>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Como funciona</a></li>
-            <li><a href="#">Dicas</a></li>
+            <li><a href="#carousel_607d">Quem somos</a></li>
+            <li><a href="#carousel_79bd">Como funciona</a></li>
+            <li><a href="#carousel_f056">Dicas</a></li>
+            <li><a href="#carousel_119d">Contate-nos</a></li>
             <li><button class="signup" onclick="openCadastro()">Cadastre-se</button></li>
             <li><button class="login" onclick="openLogin()">Entrar</button></li>
         </ul>
     </header>
+
+
+
     <!-- AFETIVA  -->
     <section class="u-clearfix u-image u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-section-1 ajuste" id="sec-832e">
         <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
@@ -35,8 +39,8 @@
                 <div class="u-layout-row">
                     <div class="u-align-left u-container-style u-layout-cell u-size-29 u-layout-cell-1">
                         <div class="u-container-layout u-valign-bottom-xs u-container-layout-1">
-                            <p class="text-inicial">Uma iniciativa <br> para unir todos <br> por um propósito: <br> a educação</p>
-                            <a  href="#carousel_79bd" class="btn-saiba" style="left: 20px;">saiba mais sobre o nosso projeto</a>
+                            <p class="text-inicial">Uma iniciativa <br> para unir todos <br> por um propósito: <br> A educação.</p>
+                            <a href="#carousel_79bd" class="btn-saiba" style="left: 20px;">saiba mais sobre o nosso projeto</a>
                         </div>
                     </div>
                     <div class="u-align-right u-container-style u-image u-layout-cell u-size-31 u-image-1">
@@ -46,78 +50,84 @@
             </div>
         </div>
     </section>
-    <!-- QUEM SOMOS NÓS  -->
-    <section class="u-clearfix u-section-2" id="carousel_607d">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-                <div class="u-layout">
-                    <div class="u-layout-row">
-                        <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
-                            <div class="u-container-layout u-container-layout-1">
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-1"></div>
-                                <div alt="" class="u-image u-image-circle u-image-1" data-image-width="640" data-image-height="640">
-                                </div>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-2"></div>
-                                <div alt="" class="u-image u-image-circle u-image-2" data-image-width="960" data-image-height="1280">
-                                </div>
-                                <h6 class="u-text u-text-1">Gabriel Kenji</h6>
-                                <small>dev. back-end</small>
-                                <h6 class="u-text u-text-2">Maressa Gonzales</h6>
-                                <small>UX</small>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-3"></div>
-                                <div alt="" class="u-image u-image-circle u-image-3" data-image-width="256" data-image-height="256">
-                                </div>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-4"></div>
-                                <div alt="" class="u-image u-image-circle u-image-4" data-image-width="1280" data-image-height="968">
-                                </div>
-                                <h6 class="u-text u-text-3">Rodrigo Lopes</h6>
-                                <small>dev. back-end</small>
-                                <h6 class="u-text u-text-4">Marina Machado</h6>
-                                <small>UX</small>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-3"></div>
-                                <div alt="" class="u-image u-image-circle u-image-5" data-image-width="256" data-image-height="256">
-                                </div>
-                                <div class="u-custom-color-3 u-shape u-shape-circle u-shape-4"></div>
-                                <div alt="" class="u-image u-image-circle u-image-6" data-image-width="960" data-image-height="968">
-                                </div>
-                                <h6 class="u-text u-text-3">Pedro H. Reis</h6>
-                                <small>dev. front-end</small>
-                                <div>
-                                    <h6 class="u-text u-text-6">Jonathan Ferreira</h6>
-                                    <small>dev. front-end</small>
-                                </div>
 
-                                <div class="u-shape u-shape-svg u-text-custom-color-3 u-shape-7" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0">
-                                    <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 50" style="">
-                    <use xlink:href="#svg-7f47"></use>
-                  </svg>
-                                    <svg class="u-svg-content" viewBox="0 0 160 50" x="0px" y="0px" id="svg-7f47" style="enable-background:new 0 0 160 50;">
-                    <path d="M133,26.7c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,22
-	c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0
-	l-3.8,4.7C146.9,20.2,142.3,20.2,133,26.7z M133,10.8c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0
-	c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,6.1c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0C75.1-2,85.9-1.6,97,6.1
-	c11.4,8,20.3,8.3,32.2,0C140.8-2,148.4-2,160,6.1l-3.8,4.7C146.9,4.3,142.3,4.3,133,10.8z M32.2,38c11,7.6,19,8.5,31.3,0
-	c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0l-3.8,4.7c-9.3-6.5-13.9-6.5-23.3,0
-	c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,38
-	C11.2,30.2,20.6,29.9,32.2,38z"></path>
-                  </svg>
-                                </div>
+    <!-- QUEM SOMOS NÓS  -->
+    <section class="container-qs" id="carousel_607d">
+        <div class="container-01">
+            <section class="container column">
+
+                <div class="item">
+                    <section class="container row">
+                        <div class="item">
+                            <div>
+                                <img src="./images/hp/maressa.png">
+                                <h5 class="">Maressa Gonzales</h5>
+                                <p>UX</p>
                             </div>
                         </div>
-                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
-                            <div class="u-container-layout u-container-layout-2">
-                                <h1 class="u-text u-text-7">Quem somos&nbsp;<span style="font-weight: 700;">nós?</span>
-                                </h1>
-                                <p class="u-text u-text-grey-50 u-text-8">Somos uma plataforma para organizar e facilitar a doação de materiais escolares.<br>
-                                    <br>Com a ideia desenvolvida pela FCamara, nós do squad #29 criamos a aFetivo para que alunos possam ter materiais escolares, mesmo sem ter condições de comprá-los
-                                </p>
+                        <div class="item">
+                            <div>
+                                <img src="./images/hp/marina.png">
+                                <h5 class="">Marina Machado</h5>
+                                <p>UX</p>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
+
+                <div class="item">
+                    <section class="container row">
+                        <div class="item">
+                            <div>
+                                <img src="./images/hp/kenji.png">
+                                <h5 class="">Gabriel Kenji</h5>
+                                <p>Dev. back-end</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="">
+                                <img src="./images/hp/jonathan 2.png">
+                                <h5 class="">Jonathan Ferreira</h5>
+                                <p>Dev. front-end</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="item">
+                    <section class="container row">
+                        <div class="item">
+                            <div class="">
+                                <img src="./images/hp/pedro.png">
+                                <h5 class="">Pedro H. Reis</h5>
+                                <p>Dev. front-end</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="">
+                                <img src="./images/hp/rodrigo.png">
+                                <h5 class="">Rodrigo Lopes</h5>
+                                <p>Dev. back-end</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="container-02">
+            <div class="text-content">
+                <h1 class="">Quem somos&nbsp;<span style="font-weight: 700;">nós?</span>
+                </h1>
+                <p>Somos uma plataforma para organizar e facilitar a doação de materiais escolares.</p>
+                <p>Com a proposta dada pela FCamara, nós do Squad #29 criamos a aFetivo para que alunos possam ter materiais escolares, mesmo sem ter condições de comprá-los
+                </p>
             </div>
         </div>
     </section>
+
     <!-- COMO FUNCIONA  -->
     <section class="u-clearfix u-custom-color-3 u-section-3" id="carousel_79bd">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -143,7 +153,7 @@
                                 </div>
                                 <h1 class="u-text u-text-1">Como <span style="font-weight: 700;">funciona?</span>
                                 </h1>
-                                <p class="u-text u-text-2">Na nossa plataforma você poderá fazer 2 tipos de cadastro: Aluno e Doador.Você escolhe o perfil que é mais a sua cara, realiza o cadastro e após preencher o formulário de acordo com sua necessidade, é só aguardar a notificação
+                                <p class="u-text u-text-2">Na nossa plataforma você poderá fazer 2 tipos de cadastro: Aluno e Doador.Você escolhe o perfil que te identifica, realiza o cadastro e após preencher o formulário de acordo com sua necessidade, é só aguardar a notificação
                                     e confirmação das doações.</p>
                             </div>
                         </div>
@@ -196,20 +206,21 @@
                     <use xlink:href="#svg-1a12"></use>
                   </svg>
                                     <svg class="u-svg-content" viewBox="0 0 160 50" x="0px" y="0px" id="svg-1a12" style="enable-background:new 0 0 160 50;">
-                    <path d="M133,26.7c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,22
-	c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0
-	l-3.8,4.7C146.9,20.2,142.3,20.2,133,26.7z M133,10.8c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0
-	c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,6.1c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0C75.1-2,85.9-1.6,97,6.1
-	c11.4,8,20.3,8.3,32.2,0C140.8-2,148.4-2,160,6.1l-3.8,4.7C146.9,4.3,142.3,4.3,133,10.8z M32.2,38c11,7.6,19,8.5,31.3,0
-	c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0l-3.8,4.7c-9.3-6.5-13.9-6.5-23.3,0
-	c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,38
-	C11.2,30.2,20.6,29.9,32.2,38z"></path>
+                        <path d="M133,26.7c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,22
+                        c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0
+                        l-3.8,4.7C146.9,20.2,142.3,20.2,133,26.7z M133,10.8c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0
+                        c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,6.1c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0C75.1-2,85.9-1.6,97,6.1
+                        c11.4,8,20.3,8.3,32.2,0C140.8-2,148.4-2,160,6.1l-3.8,4.7C146.9,4.3,142.3,4.3,133,10.8z M32.2,38c11,7.6,19,8.5,31.3,0
+                        c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0l-3.8,4.7c-9.3-6.5-13.9-6.5-23.3,0
+                        c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,38
+                        C11.2,30.2,20.6,29.9,32.2,38z">
+                        </path>
                   </svg>
                                 </div>
                                 <p class="u-text u-text-3">Tudo isso sem precisar se cadastrar!<br>
                                     <br>Clique no botão abaixo para ser direcionado a nossa página de dicas.
                                 </p>
-                                <a href="" class="u-active-palette-1-dark-2 u-btn u-btn-rectangle u-button-style u-custom-font u-font-pt-sans u-hover-palette-1-dark-2 u-palette-1-dark-3 u-radius-30 u-btn-1">ver
+                                <a href="dicas.html" class="u-active-palette-1-dark-2 u-btn u-btn-rectangle u-button-style u-custom-font u-font-pt-sans u-hover-palette-1-dark-2 u-palette-1-dark-3 u-radius-8 u-btn-1">ver
                   dicas</a>
                             </div>
                         </div>
@@ -218,7 +229,7 @@
             </div>
         </div>
     </section>
-    <!-- FALE CONOSCO  -->
+    <!-- CONTATE-NOS  -->
     <section class="u-clearfix u-custom-color-3 u-section-5" id="carousel_119d">
         <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-sheet-1">
             <div class="u-align-center u-container-style u-expanded-width-xs u-group u-radius-31 u-shape-round u-white u-group-1">
@@ -330,7 +341,7 @@
                 <div class="user sign-in">
                     <div class="img-bx"><img src="./images/wqe-min.jpg"></div>
                     <div class="form-bx">
-                        <form method="POST" action="_api/Login.php" >
+                        <form method="POST" action="_api/Login.php">
                             <h2>Login</h2>
                             <select name="usuarios" id="usuarios">
                                 <option value="Aluno">Aluno</option>
@@ -350,30 +361,30 @@
                         <form action="_api/Selecao_Cadastro.php" method="POST">
                             <h2>Criar conta</h2>
                             <div class="users">
-                                
-                                    <div>
-                                        <h3>Aluno</h3>
-                                        <div class="img-cadastro">
-                                            <img src="./images/aluno_300.png" alt="" srcset="">
-                                        </div>
-                                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="op1">
+
+                                <div>
+                                    <h3>Aluno</h3>
+                                    <div class="img-cadastro">
+                                        <img src="./images/aluno_300.png" alt="" srcset="">
                                     </div>
-                                    <div>
-                                        <h3>Doador</h3>
-                                        <div class="img-cadastro">
-                                            <img src="./images/doador_300.png" alt="" srcset="">
-                                        </div>
-                                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="op2">
+                                    <INPUT TYPE="radio" NAME="OPCAO" VALUE="op1">
+                                </div>
+                                <div>
+                                    <h3>Doador</h3>
+                                    <div class="img-cadastro">
+                                        <img src="./images/doador_300.png" alt="" srcset="">
                                     </div>
-                                    <div>
-                                        <h3>Escola</h3>
-                                        <div class="img-cadastro">
-                                            <img src="./images/escola_300.png" alt="" srcset="">
-                                        </div>
-                                        <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
+                                    <INPUT TYPE="radio" NAME="OPCAO" VALUE="op2">
+                                </div>
+                                <div>
+                                    <h3>Escola</h3>
+                                    <div class="img-cadastro">
+                                        <img src="./images/escola_300.png" alt="" srcset="">
                                     </div>
-                                    <input type="submit" name="" value="Cadastrar">
-                                
+                                    <INPUT TYPE="radio" NAME="OPCAO" VALUE="op3">
+                                </div>
+                                <input type="button" name="" id="tipoCadastro" onclick="pagCadastro()" value="Cadastrar">
+
                             </div>
                             <p class="link-sign-up">Já tem cadastro? <a href="#" onclick="alternarForm()">Clique aqui</a> </p>
                         </form>

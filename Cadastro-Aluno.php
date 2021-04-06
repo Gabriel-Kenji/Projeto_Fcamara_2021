@@ -88,6 +88,7 @@ include("_api/Select_Escolas.php")
             </nav>
         </div>
     </header>
+    
     <section class="u-align-left u-clearfix u-custom-color-3 u-section-1" id="carousel_7ef2">
         <div class="u-clearfix u-sheet u-sheet-1">
             <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
