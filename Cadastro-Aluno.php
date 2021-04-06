@@ -26,10 +26,8 @@ include("_api/Select_Escolas.php")
                         <div class="line3"></div>
                     </div>
                     <ul class="nav-list" id="nav-list">
-                        <li><a href="">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="dicas.html">Dicas</a></li>
-                        <li><button class="signup" onclick="openCadastro()">Cadastre-se</button></li>
-                        <li><button class="login" onclick="openLogin()">Entrar</button></li>
                     </ul>
                 </nav>
         </header>
