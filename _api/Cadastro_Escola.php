@@ -39,7 +39,7 @@ if(isset($_POST['numeroINEP']) && !empty($_POST['numeroINEP']) && isset($_POST['
                 $DaoCadastroEscola->create_com_telefone($user);
                 $_SESSION['erro_cad'] = 4;
                 echo "foi";
-                header("Location: ../Homepage.html");
+                header("Location: ../Index.html");
             }
             else{
                 //ERRO EMAIL JA EXISTENTE
@@ -54,7 +54,7 @@ if(isset($_POST['numeroINEP']) && !empty($_POST['numeroINEP']) && isset($_POST['
                 $DaoCadastroEscola->create_sem_telefone($user);
                 $_SESSION['erro_cad'] = 4;
                 echo "foi";
-                header("Location: ../Homepage.html");
+                header("Location: ../Index.html");
             }
             else{
                 //ERRO EMAIL JA EXISTENTE

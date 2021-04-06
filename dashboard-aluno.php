@@ -3,7 +3,7 @@ session_start();
 //Verificacao e Coletando dados
 $id = $_SESSION['RaAluno'];
 if(!isset($_SESSION['RaAluno'])){
-    header("Location: /projeto_fcamara_2021/homepage.html");
+    header("Location: /projeto_fcamara_2021/Index.html");
 }
 
 include("_api/Select_Material.php");
@@ -51,13 +51,13 @@ include("_api/Select_Material.php");
                 </div>
                 <div class="u-custom-menu u-nav-container">
                     <ul class="u-nav u-spacing-2 u-unstyled u-nav-1">
-                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Homepage.html#carousel_f056"
+                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Index.html#carousel_f056"
                                 data-page-id="303762" style="padding: 12px 20px;">Dicas</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Homepage.html#carousel_79bd"
+                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Index.html#carousel_79bd"
                                 data-page-id="303762" style="padding: 12px 20px;">Como funciona</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Homepage.html#carousel_119d"
+                        <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="/Index.html#carousel_119d"
                                 data-page-id="303762" style="padding: 12px 20px;">Contate-nos</a>
                         </li>
                         <li class="u-nav-item"><a class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-15 u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 12px 20px;">Sair</a>
@@ -69,11 +69,11 @@ include("_api/Select_Material.php");
                         <div class="u-sidenav-overflow">
                             <div class="u-menu-close"></div>
                             <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Homepage.html#carousel_f056" data-page-id="303762" style="padding: 12px 20px;">Dicas</a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Index.html#carousel_f056" data-page-id="303762" style="padding: 12px 20px;">Dicas</a>
                                 </li>
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Homepage.html#carousel_79bd" data-page-id="303762" style="padding: 12px 20px;">Como funciona</a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Index.html#carousel_79bd" data-page-id="303762" style="padding: 12px 20px;">Como funciona</a>
                                 </li>
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Homepage.html#carousel_119d" data-page-id="303762" style="padding: 12px 20px;">Contate-nos</a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Index.html#carousel_119d" data-page-id="303762" style="padding: 12px 20px;">Contate-nos</a>
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 12px 20px;">Sair</a>
                                 </li>

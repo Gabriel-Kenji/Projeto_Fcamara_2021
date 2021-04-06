@@ -3,7 +3,7 @@ session_start();
 
 $id = $_SESSION['RaAluno'];
 if(!isset($_SESSION['RaAluno'])){
-    header("Location: /projeto_fcamara_2021/homepage.html");
+    header("Location: /projeto_fcamara_2021/Index.html");
 }
 include("_api/Select_Material.php");
 
@@ -22,7 +22,7 @@ include("_api/Select_Material.php");
 <!-- <body onload="listarItens()"> -->
 <body>
     <header>
-        <a href="homepage.html" class="logo">aFetivo</a>
+        <a href="Index.html" class="logo">aFetivo</a>
         <ul>
             <li><button  class="login"><a href="_api/function/logout.php" class="login">Sair</a></button></li>
         </ul>

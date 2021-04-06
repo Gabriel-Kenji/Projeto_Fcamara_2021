@@ -41,7 +41,7 @@ if(isset($_POST['numeroCPF']) && !empty($_POST['numeroCPF']) && isset($_POST['em
                 $DaoCadastroDoador->create_com_telefone($user);
                 $_SESSION['erro_cad'] = 4;
                 echo "foi";
-                header("Location: ../Homepage.html");
+                header("Location: ../Index.html");
             }
             else{
                 //ERRO EMAIL JA EXISTENTE
@@ -56,7 +56,7 @@ if(isset($_POST['numeroCPF']) && !empty($_POST['numeroCPF']) && isset($_POST['em
                 $DaoCadastroDoador->create_sem_telefone($user);
                 $_SESSION['erro_cad'] = 4;
                 echo "foi";
-                header("Location: ../Homepage.html");
+                header("Location: ../Index.html");
             }
             else{
                 //ERRO EMAIL JA EXISTENTE
