@@ -41,7 +41,7 @@ if(isset($_POST['numeroRA']) && !empty($_POST['numeroRA']) && isset($_POST['emai
                 $DaoCadastroAluno->create_com_telefone($user);
                 $_SESSION['erro_cad'] = 4;
                 echo "foi";
-                //header("Location: ../Homepage.html");
+                header("Location: ../Homepage.html");
             }
             else{
                 //ERRO EMAIL JA EXISTENTE
