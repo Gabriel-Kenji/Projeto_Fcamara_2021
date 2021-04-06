@@ -1,8 +1,9 @@
 <?php
 namespace _api\Classes;
-class CadastroDao{
 
-    public function create(Usuario $p){
+class DaoCadastro{
+
+    public function create(Class_Usuario $p){
         $sql = 'INSERT INTO tb_usuario (cd_usuario, nm_usuario, nm_senha, nm_email) VALUES (Null, ?, ?, ?)';
 
         $stmt = Conexao::getConn()->prepare($sql);
@@ -12,7 +13,7 @@ class CadastroDao{
         $stmt->execute();
     }
 
-    public function read(Usuario $p){
+    public function read(Class_Usuario $p){
 
         $sql = 'SELECT * From tb_usuario WHERE nm_email = ?';
 
@@ -29,4 +30,5 @@ class CadastroDao{
         endif;            
     }
 }
+
 ?>

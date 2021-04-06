@@ -1,6 +1,6 @@
 <?php
 namespace _api\Classes;
-class Usuario{
+class Class_Usuario{
     private $id, $email, $senha, $nome, $apelido, $imagem, $emailc;
 
     public function getId(){

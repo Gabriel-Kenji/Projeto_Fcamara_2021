@@ -1,16 +1,17 @@
 <?php
 namespace _api\Classes;
 
-Class LoginDao
+Class DaoAlunoEscola
 {
-    public function read(Usuario $p){
+    public function readselect(Class_escola $p){
 
         //puxando dados do banco
-        $sql = 'SELECT * From tb_usuario WHERE nm_email = ?';
+        $sql = 'SELECT * FROM tb_aluno where cd_INEP = ?';
 
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1, $p->getEmail());
+        $stmt->bindValue(1, $p->getInep()); 
         $stmt->execute();
+
 
         if($stmt->rowCount() > 0):
             $resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);

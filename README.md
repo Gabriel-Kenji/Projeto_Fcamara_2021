@@ -40,3 +40,4 @@ Só prossiga caso já tenha instalado o PROJETO!!!
   - Caso tenha alterado o nome da pasta do projeto também sera necessario alteral a URL com o novo nome. 
     - EXEMPLO: http://localhost/NOVONOME
 
+

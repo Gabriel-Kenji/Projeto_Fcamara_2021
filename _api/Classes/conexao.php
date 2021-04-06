@@ -8,7 +8,7 @@ class Conexao{
     
         //conexão com o banco (ip / nome do banco / usuario / senha)
         if(!isset(self::$instance)):
-                self::$instance = new \PDO('mysql:host=localhost;dbname=banco_fcamara_2021;charset=utf8','root','');
+                self::$instance = new \PDO('mysql:host=localhost;dbname=db_fcamara;charset=utf8','root','');
         endif;
             return self::$instance;   
     }
