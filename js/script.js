@@ -2,22 +2,7 @@
 window.addEventListener("scroll", function() {
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
-})
-
-const toggle = document.getElementById("toggle");
-const header = document.getElementById("header");
-
-document.onclick = function(e) {
-    if(e.target.id !== 'header' && e.target.id !=='toggle'){
-        toggle.classList.remove("active");
-        header.classList.remove("active");
-    }
-}
-
-toggle.onclick = function() {
-    toggle.classList.toggle("active");
-    header.classList.toggle("active");
-}
+  })
 
 function openLogin() {
     document.getElementById("btnLogin").style.top = '0';
@@ -39,31 +24,8 @@ function openCadastro() {
     document.getElementById("btnLogin").style.top = '0';
     var container = document.querySelector(".container-modal");
     container.classList.add('active')
-
 }
 
-function pagCadastro() {
-    var radios = document.getElementsByName("OPCAO");
-    for(let k = 0; k < radios.length; k++){
-        if (radios[k].checked) {
-            let opcaoCadastro = radios[k].value
-            console.log(opcaoCadastro)
-            switch (opcaoCadastro) {
-                case 'op1':
-                    window.location.href = 'Cadastro-Aluno.html';
-                    break;
-                case 'op2': 
-                    window.location.href = 'Cadastro-Doador.html';
-                    break;
-                case 'op3':
-                    window.location.href = 'cadastro-escola.html';
-                    break;
-                default:
-              }
-            
-        }
-    }    
-}
 // CADASTRO-ALUNO
 
 const limparFormulario = () => {
